@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إحاطة الخميس 19 تشرين الثاني 2026</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #121a2b;
+      --line: #243049;
+      --ink: #e8eef8;
+      --mute: #93a0b8;
+      --gold: #d4b36a;
+      --up: #3dd68c;
+      --down: #f07178;
+      --mid: #e0b34c;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Sans Arabic", "Noto Naskh Arabic", "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 22px; }
+    .kicker { color: var(--gold); font-size: 12px; letter-spacing: .12em; }
+    h1 { margin: 6px 0 8px; font-size: 28px; font-weight: 700; }
+    .meta { color: var(--mute); font-size: 14px; }
+    h2 { font-size: 18px; margin: 28px 0 12px; color: var(--gold); }
+    h3 { font-size: 15px; margin: 16px 0 8px; }
+    p, li { font-size: 15px; }
+    .note { color: var(--mute); font-size: 13px; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .kpi b { display: block; font-size: 22px; margin-top: 4px; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .flat { color: var(--mute); }
+    ol.windows { padding-right: 18px; }
+    ol.windows li { margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--panel); border-radius: 12px; overflow: hidden; }
+    th, td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: right; vertical-align: top; }
+    th { color: var(--mute); font-weight: 600; background: #0f1728; }
+    tr:last-child td { border-bottom: 0; }
+    a { color: #8ec5ff; }
+    .src { display: grid; gap: 6px; padding: 0; list-style: none; }
+    footer { margin-top: 28px; color: var(--mute); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+    .chip {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .chip.on { border-color: var(--gold); color: var(--gold); }
+    .story {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+    }
+    .story .tag { color: var(--gold); font-size: 12px; }
+    .story[hidden] { display: none; }
+    #filterMeta { color: var(--mute); font-size: 13px; margin: 0 0 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">OSINT · وكالات أولاً</div>
+      <h1>إحاطة الخميس 19 تشرين الثاني 2026</h1>
+      <div class="meta">القطع: 11:00 الرياض (08:00 UTC) · روتين كل يومين · وكالات ثم عالمية/عربية ثم شبكات حرة · التقدير معلَّم أنه ليس خبراً</div>
+    </header>
+
+    <h2>رؤى القطع</h2>
+    <div class="kpis">
+      <div class="kpi">عدد الأخبار<b>29</b><span class="flat">صفوف فريدة ب–هـ</span></div>
+      <div class="kpi">عدد المصادر<b>24</b><span class="flat">هذا القطع · قائمة رصد أوسع أدناه</span></div>
+      <div class="kpi">الدول المغطاة<b>17</b><span class="flat">منها مصر من الأخبار لا الترند</span></div>
+      <div class="kpi">الخبر المهيمن<div><b style="font-size:15px;line-height:1.4">قمة شنتشن الثلاثية</b></div><span class="flat">هرمز · صواريخ الرياض موازيان</span></div>
+    </div>
+    <p class="note">التصنيف: عسكري 12 · دبلوماسي 6 · اقتصادي 6 · سياسي 2 · قانوني 1 · كوارث 1. رصد فُحصت بلا بند جيوسياسي مطابق. النوافذ الخمس ملخص لهذه الصفوف.</p>
+
+    <h2>فلتر حسب البلد والنوع</h2>
+    <div class="chips" id="typeChips">
+      <button type="button" class="chip on" data-type="all">كل الأنواع</button>
+      <button type="button" class="chip" data-type="عسكري">عسكري</button>
+      <button type="button" class="chip" data-type="دبلوماسي">دبلوماسي</button>
+      <button type="button" class="chip" data-type="اقتصادي">اقتصادي</button>
+      <button type="button" class="chip" data-type="سياسي">سياسي</button>
+      <button type="button" class="chip" data-type="إنساني">إنساني</button>
+      <button type="button" class="chip" data-type="كوارث">كوارث</button>
+      <button type="button" class="chip" data-type="قانوني">قانوني</button>
+    </div>
+    <div class="chips" id="countryChips">
+      <button type="button" class="chip on" data-country="all">كل البلدان</button>
+      <button type="button" class="chip" data-country="مصر">مصر</button>
+      <button type="button" class="chip" data-country="السعودية">السعودية</button>
+      <button type="button" class="chip" data-country="إيران">إيران</button>
+      <button type="button" class="chip" data-country="أمريكا">أمريكا</button>
+      <button type="button" class="chip" data-country="اليمن">اليمن</button>
+      <button type="button" class="chip" data-country="أوكرانيا">أوكرانيا</button>
+      <button type="button" class="chip" data-country="روسيا">روسيا</button>
+      <button type="button" class="chip" data-country="الصين">الصين</button>
+      <button type="button" class="chip" data-country="الإمارات">الإمارات</button>
+      <button type="button" class="chip" data-country="الكويت">الكويت</button>
+      <button type="button" class="chip" data-country="البحرين">البحرين</button>
+      <button type="button" class="chip" data-country="إسرائيل">إسرائيل</button>
+      <button type="button" class="chip" data-country="فلسطين">فلسطين</button>
+    </div>
+    <p id="filterMeta">29 خبراً</p>
+    <div id="feed">
+      <article class="story" data-type="عسكري" data-countries="أمريكا إيران"><div class="tag">عسكري · أمريكا / إيران · محدَّث</div>حاملتان بعد مغادرة جورج واشنطن</article>
+      <article class="story" data-type="عسكري" data-countries="أمريكا إيران"><div class="tag">عسكري · أمريكا / إيران · جديد</div>ضرب موقع صواريخ للحرس في قشم</article>
+      <article class="story" data-type="عسكري" data-countries="البحرين الكويت إيران"><div class="tag">عسكري · البحرين / الكويت / إيران · جديد</div>اعتراض أسلحة إيرانية بعد قشم</article>
+      <article class="story" data-type="عسكري" data-countries="الإمارات إيران"><div class="tag">عسكري · الإمارات / إيران · جديد</div>أدنوك: مفقود و11 مصاباً في هرمز</article>
+      <article class="story" data-type="عسكري" data-countries="إيران"><div class="tag">عسكري · إيران / هرمز · مستمر</div>ادعاء ألغام 3 ناقلات شرق المضيق</article>
+      <article class="story" data-type="اقتصادي" data-countries="إيران"><div class="tag">اقتصادي · هرمز · جديد</div>ناقلات أصغر؛ التدفق قرب ما قبل الحرب</article>
+      <article class="story" data-type="دبلوماسي" data-countries="عُمان إيران"><div class="tag">دبلوماسي · عُمان / إيران · مستمر</div>قناة مسقط بلا اختراق معلن</article>
+      <article class="story" data-type="اقتصادي" data-countries="أمريكا"><div class="tag">اقتصادي · أمريكا · جديد</div>المخزون التجاري +3.4 م ب إلى 417.8 م</article>
+      <article class="story" data-type="دبلوماسي" data-countries="الصين أمريكا روسيا أوكرانيا"><div class="tag">دبلوماسي · الصين / أمريكا / روسيا · جديد</div>قمة شنتشن: ترامب لشي أن واشنطن وبكين تساعدان في إنهاء الحرب</article>
+      <article class="story" data-type="دبلوماسي" data-countries="أوكرانيا"><div class="tag">دبلوماسي · أوكرانيا · جديد</div>سيبيها: اضغطوا على بوتين لا دوائر نفوذ</article>
+      <article class="story" data-type="عسكري" data-countries="أوكرانيا روسيا"><div class="tag">عسكري · أوكرانيا / روسيا · جديد</div>غارة على أوديسا: 4 قتلى و13 مصاباً</article>
+      <article class="story" data-type="اقتصادي" data-countries="أوكرانيا"><div class="tag">اقتصادي · أوروبا / أوكرانيا · جديد</div>قرض أوروبي 135 مليار يورو على سنتين</article>
+      <article class="story" data-type="اقتصادي" data-countries="روسيا"><div class="tag">اقتصادي · أوروبا / روسيا · جديد</div>عقوبات على مصارف وأسطول الظل</article>
+      <article class="story" data-type="سياسي" data-countries="فرنسا"><div class="tag">سياسي · فرنسا · محدَّث</div>لوبان: إيقاف الدعم المالي لأوكرانيا إن انتُخبت</article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">عسكري · السعودية / اليمن · جديد</div>صواريخ باليستية نحو الرياض؛ شظايا وأضرار مادية</article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">عسكري · السعودية / اليمن · جديد</div>اعتراض 4 صواريخ باليستية نحو الجنوب</article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">عسكري · السعودية / اليمن · جديد</div>تدمير منصتَي إطلاق في صعدة وذمار</article>
+      <article class="story" data-type="عسكري" data-countries="اليمن السعودية"><div class="tag">عسكري · اليمن · جديد</div>الحوثي يتبنى إطلاق صواريخ نحو الرياض</article>
+      <article class="story" data-type="عسكري" data-countries="اليمن"><div class="tag">عسكري · اليمن · جديد</div>ادعاء حوثي: غارة على مصنع إسفنج في الحديدة</article>
+      <article class="story" data-type="دبلوماسي" data-countries="السعودية أمريكا"><div class="tag">دبلوماسي · السعودية / أمريكا · جديد</div>ولي العهد يستقبل قائد سنتكوم</article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">عسكري · السعودية / اليمن · مستمر</div>الرويلي قائداً للقوات المشتركة</article>
+      <article class="story" data-type="كوارث" data-countries="السعودية"><div class="tag">كوارث · السعودية · جديد</div>أمطار غزيرة ورياح شديدة على الباحة</article>
+      <article class="story" data-type="عسكري" data-countries="فلسطين إسرائيل"><div class="tag">عسكري · فلسطين / إسرائيل · جديد</div>أول عملية برية غرب الخط الأصفر منذ وقف النار</article>
+      <article class="story" data-type="دبلوماسي" data-countries="أمريكا"><div class="tag">دبلوماسي · الدانمارك / أمريكا · جديد</div>برلمان الدانمارك يصوّت على اتفاق غرينلاند</article>
+      <article class="story" data-type="سياسي" data-countries="أمريكا"><div class="tag">سياسي · أمريكا · جديد</div>الديمقراطيون يرشحون جيفريز لرئاسة النواب</article>
+      <article class="story" data-type="اقتصادي" data-countries="مصر"><div class="tag">اقتصادي · مصر · محدَّث</div>المركزي: الدولار 53.75 شراء / 53.88 بيع</article>
+      <article class="story" data-type="اقتصادي" data-countries="مصر"><div class="tag">اقتصادي · مصر · محدَّث</div>السيسي: نمو 5.1٪ واحتياطي 57.5 مليار دولار</article>
+      <article class="story" data-type="دبلوماسي" data-countries="مصر أمريكا"><div class="tag">دبلوماسي · مصر / أمريكا · جديد</div>الكونغرس يكرّم السادات؛ السيسي يشيد</article>
+      <article class="story" data-type="قانوني" data-countries="مصر"><div class="tag">قانوني · مصر · جديد</div>القضاء يوقف النظر مؤقتاً في قضية لينا عطالله</article>
+    </div>
+
+    <h2>أسواق</h2>
+    <div class="kpis">
+      <div class="kpi">برنت<div><b>92.00</b></div><span class="up">+0.05٪</span></div>
+      <div class="kpi">غرب تكساس (ديسمبر)<div><b>83.00</b></div><span class="down">−0.31٪</span></div>
+      <div class="kpi">ذهب فوري<div><b>3,705.51</b></div><span class="flat">رويترز عبر BR</span></div>
+      <div class="kpi">تاسي (إغلاق الأربعاء)<div><b>10,200.16</b></div><span class="down">−0.52٪</span></div>
+    </div>
+    <p class="note">برنت وغرب تكساس: رويترز 04:55 UTC. مشتق Investing عند الجلب: برنت 92.11 وغرب تكساس 82.17 (يناير الأنشط 82.09). الذهب الآجل 3,735.42 (−0.17٪). تاسي: إغلاق الأربعاء — جلسة الخميس مفتوحة عند القطع. أرقام 18←19: 86 مرتفعة / 180 هابطة، تغير الفترة −0.17٪. المخزون التجاري الأمريكي +3.4 م ب إلى 417.8 م (EIA عبر رويترز).</p>
+
+    <h3>أعلى 10 — لقطة أرقام 18←19 (جلسة الخميس لا إغلاق)</h3>
+    <table>
+      <thead><tr><th>#</th><th>الشركة</th><th>18</th><th>19</th><th>التغير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>التطويرية الغذائية</td><td>66.10</td><td>69.35</td><td class="up">+4.92٪</td></tr>
+        <tr><td>2</td><td>مرنة</td><td>7.66</td><td>7.96</td><td class="up">+3.92٪</td></tr>
+        <tr><td>3</td><td>جاز</td><td>13.54</td><td>13.99</td><td class="up">+3.32٪</td></tr>
+        <tr><td>4</td><td>عناية</td><td>8.00</td><td>8.25</td><td class="up">+3.13٪</td></tr>
+        <tr><td>5</td><td>أماك</td><td>59.25</td><td>61.00</td><td class="up">+2.95٪</td></tr>
+        <tr><td>6</td><td>نفوذ</td><td>6.31</td><td>6.44</td><td class="up">+2.06٪</td></tr>
+        <tr><td>7</td><td>سي جي إس</td><td>7.21</td><td>7.35</td><td class="up">+1.94٪</td></tr>
+        <tr><td>8</td><td>الأسماك</td><td>53.05</td><td>53.80</td><td class="up">+1.41٪</td></tr>
+        <tr><td>9</td><td>صالح الراشد</td><td>35.00</td><td>35.46</td><td class="up">+1.31٪</td></tr>
+        <tr><td>10</td><td>كابلات الرياض</td><td>102.00</td><td>103.30</td><td class="up">+1.27٪</td></tr>
+      </tbody>
+    </table>
+
+    <h3>أكثر 10 هبوطاً — اللقطة نفسها</h3>
+    <table>
+      <thead><tr><th>#</th><th>الشركة</th><th>18</th><th>19</th><th>التغير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>الإعادة السعودية</td><td>29.50</td><td>28.38</td><td class="down">−3.80٪</td></tr>
+        <tr><td>2</td><td>رؤوم</td><td>76.95</td><td>74.10</td><td class="down">−3.70٪</td></tr>
+        <tr><td>3</td><td>دله الصحية</td><td>58.65</td><td>57.00</td><td class="down">−2.81٪</td></tr>
+        <tr><td>4</td><td>تهامة</td><td>15.70</td><td>15.31</td><td class="down">−2.48٪</td></tr>
+        <tr><td>5</td><td>ارتيكس</td><td>8.38</td><td>8.18</td><td class="down">−2.39٪</td></tr>
+        <tr><td>6</td><td>العمران</td><td>19.47</td><td>19.02</td><td class="down">−2.31٪</td></tr>
+        <tr><td>7</td><td>التأمين العربية</td><td>6.03</td><td>5.90</td><td class="down">−2.16٪</td></tr>
+        <tr><td>8</td><td>بترو رابغ</td><td>14.98</td><td>14.67</td><td class="down">−2.07٪</td></tr>
+        <tr><td>9</td><td>الحفر العربية</td><td>102.80</td><td>100.80</td><td class="down">−1.95٪</td></tr>
+        <tr><td>10</td><td>تسهيل</td><td>20.39</td><td>20.00</td><td class="down">−1.91٪</td></tr>
+      </tbody>
+    </table>
+
+    <h2>أ) خمس نوافذ</h2>
+    <ol class="windows">
+      <li>ترامب يلتقي شي ثم بوتين في شنتشن ثم الثلاثية؛ يقول إن أمريكا والصين تساعدان في إنهاء حرب أوكرانيا. <span class="note">(رويترز / أ ب)</span></li>
+      <li>حاملة جورج واشنطن تغادر المنطقة؛ حاملتان تبقيان: ثيودور روزفلت وجورج بوش. <span class="note">(بلومبرغ / USNI عبر الأناضول)</span></li>
+      <li>ضرب أمريكي على موقع صواريخ للحرس في قشم؛ البحرين والكويت تعترضان؛ أدنوك: مفقود و11 مصاباً. <span class="note">(سي بي إس / بيان أدنوك)</span></li>
+      <li>التحالف: تهديد صاروخي نحو الرياض مع شظايا وأضرار؛ اعتراض 4 صواريخ نحو الجنوب؛ تدمير منصتَين في صعدة وذمار. <span class="note">(واس / سبق)</span></li>
+      <li>برنت عند 92 دولاراً: شحنات هرمز قرب مستوى ما قبل الحرب رغم الهجمات. <span class="note">(رويترز)</span></li>
+    </ol>
+
+    <h2>ب) أمريكا / إيران / هرمز</h2>
+    <table>
+      <thead><tr><th>الواقعة</th><th>النوع</th><th>المصدر</th><th>الثقة</th></tr></thead>
+      <tbody>
+        <tr><td>جورج واشنطن غادرت؛ حاملتان: روزفلت وبوش.</td><td>رسمي عبر وكالة</td><td>بلومبرغ / USNI</td><td>عالية للمغادرة</td></tr>
+        <tr><td>ضرب موقع صواريخ للحرس في قشم «دفاعاً عن النفس».</td><td>رسمي أمريكي</td><td>سي بي إس</td><td>عالية للنص</td></tr>
+        <tr><td>البحرين والكويت تعترضان أسلحة إيرانية بعد قشم.</td><td>رسمي خليجي</td><td>سي بي إس</td><td>عالية للاعتراض</td></tr>
+        <tr><td>أدنوك: مفقود و11 مصاباً بعد ضرب سفينة 17 تشرين الثاني.</td><td>شركة رسمية</td><td>بيان أدنوك / رويترز</td><td>عالية للنص</td></tr>
+        <tr><td>ادعاء بحرية إيران: 3 ناقلات ألغام شرق هرمز. الأرقام غير متطابقة.</td><td>ادعاء إيراني</td><td>العربية عن رويترز عن برس تي في</td><td>منخفضة–متوسطة</td></tr>
+        <tr><td>ناقلات أصغر؛ صادرات المضيق 10.3 م ب/ي قرب ما قبل الحرب.</td><td>بيانات شحن</td><td>رويترز عن Vortexa</td><td>عالية للمنسوب</td></tr>
+        <tr><td>قناة مسقط بلا اختراق معلن هذا القطع.</td><td>بيان سابق</td><td>رويترز (الثلاثاء)</td><td>عالية للنص السابق</td></tr>
+        <tr><td>المخزون التجاري الأمريكي +3.4 م ب إلى 417.8 م.</td><td>بيانات طاقة</td><td>رويترز عن EIA</td><td>عالية</td></tr>
+      </tbody>
+    </table>
+
+    <h2>ج) روسيا / أوكرانيا / أوروبا</h2>
+    <table>
+      <thead><tr><th>الواقعة</th><th>النوع</th><th>المصدر</th><th>الثقة</th></tr></thead>
+      <tbody>
+        <tr><td>ترامب لشي: واشنطن وبكين تساعدان في إنهاء الحرب؛ لقاء بوتين ≈ 40 دقيقة.</td><td>رسمي</td><td>رويترز / أ ب</td><td>عالية للتصريح</td></tr>
+        <tr><td>سيبيها: اضغطوا على بوتين لا دوائر نفوذ؛ لا قرار بلا أوكرانيا.</td><td>رسمي أوكراني</td><td>رويترز</td><td>عالية للنص</td></tr>
+        <tr><td>غارة على أوديسا: 4 قتلى و13 مصاباً.</td><td>ميدان عبر صحافة</td><td>يورونيوز عربي</td><td>متوسطة–عالية</td></tr>
+        <tr><td>قرض أوروبي 135 مليار يورو على سنتين؛ مقترح 45 ملياراً من تعويضات.</td><td>رسمي أوروبي</td><td>يورونيوز عربي</td><td>عالية للحزمة</td></tr>
+        <tr><td>عقوبات أوروبية جديدة على مصارف روسيا وأسطول الظل.</td><td>رسمي</td><td>يورونيوز عربي</td><td>عالية</td></tr>
+        <tr><td>لوبان عبر حزبها: إيقاف الدعم المالي إن انتُخبت.</td><td>تصريح سياسي</td><td>فرانس 24</td><td>عالية للنص</td></tr>
+      </tbody>
+    </table>
+
+    <h2>د) الخليج والسعودية</h2>
+    <table>
+      <thead><tr><th>الواقعة</th><th>النوع</th><th>المصدر</th><th>الثقة</th></tr></thead>
+      <tbody>
+        <tr><td>التحالف: تهديد صاروخي نحو الرياض؛ شظايا وأضرار مادية تُحصر.</td><td>رسمي</td><td>واس / سبق</td><td>عالية للأضرار المعلنة</td></tr>
+        <tr><td>اعتراض 4 صواريخ باليستية نحو الجنوب.</td><td>رسمي</td><td>واس / العربية</td><td>عالية للنص</td></tr>
+        <tr><td>تدمير منصتَي إطلاق في صعدة وذمار.</td><td>رسمي</td><td>واس / سبق</td><td>عالية</td></tr>
+        <tr><td>الحوثيون يتبنون إطلاق صواريخ نحو الرياض.</td><td>ادعاء</td><td>بي بي سي عربي</td><td>عالية للتبنّي</td></tr>
+        <tr><td>ادعاء حوثي: غارة على مصنع إسفنج في الحديدة تقتل 7.</td><td>ادعاء</td><td>يورونيوز عربي</td><td>منخفضة</td></tr>
+        <tr><td>ولي العهد يستقبل كوبر قائد سنتكوم بحضور خالد بن سلمان والرويلي.</td><td>رسمي</td><td>واس</td><td>عالية</td></tr>
+        <tr><td>الرويلي ما زال قائداً للقوات المشتركة.</td><td>رسمي</td><td>واس</td><td>عالية</td></tr>
+        <tr><td>الأرصاد: أمطار غزيرة ورياح شديدة على الباحة.</td><td>طقس رسمي</td><td>واس</td><td>عالية</td></tr>
+      </tbody>
+    </table>
+
+    <h2>هـ) العالم</h2>
+    <table>
+      <thead><tr><th>الواقعة</th><th>النوع</th><th>المصدر</th><th>الثقة</th></tr></thead>
+      <tbody>
+        <tr><td>قمة ترامب–شي–بوتين في شنتشن على هامش أبيك؛ لا بيان ختامي عند القطع.</td><td>رسمي</td><td>رويترز / أ ب / الجزيرة</td><td>عالية للانعقاد</td></tr>
+        <tr><td>أول عملية برية إسرائيلية غرب الخط الأصفر منذ وقف النار؛ حماس: انتهاك. دفاع مدني: 3 قتلى في ضربات منفصلة.</td><td>رسمي + ادعاء</td><td>بي بي سي / فرانس 24</td><td>عالية للعملية</td></tr>
+        <tr><td>برلمان الدانمارك يصوّت على اتفاق غرينلاند مع واشنطن.</td><td>رسمي عبر صحافة</td><td>الجزيرة</td><td>عالية للتصويت؛ النتيجة غير مقروءة</td></tr>
+        <tr><td>الديمقراطيون يرشحون جيفريز لرئاسة النواب.</td><td>رسمي حزبي</td><td>بي بي سي عربي</td><td>عالية</td></tr>
+        <tr><td>المركزي المصري: الدولار 53.75 شراء / 53.88 بيع.</td><td>سوق</td><td>المصري اليوم عن المركزي</td><td>عالية للرقم</td></tr>
+        <tr><td>السيسي: نمو 5.1٪ واحتياطي 57.5 مليار دولار؛ برنامج 2027–2030 في كانون الأول.</td><td>رسمي عبر صحافة</td><td>المصري اليوم</td><td>عالية للنص</td></tr>
+        <tr><td>الكونغرس يكرّم السادات؛ السيسي يشيد.</td><td>رسمي</td><td>سكاي / العربية</td><td>عالية</td></tr>
+        <tr><td>القضاء يوقف النظر مؤقتاً في قضية لينا عطالله.</td><td>قضائي عبر صحافة</td><td>فرانس 24</td><td>عالية للنقل</td></tr>
+      </tbody>
+    </table>
+
+    <h2>و) نبض المنصات — ليس خبراً</h2>
+    <p class="note">لقطة ~08:00 UTC. GWI Q2 2026: فيسبوك 58.1٪ · إنستغرام 56.6٪ · يوتيوب 56.2٪ · واتساب 54.9٪ · تيك توك 36.1٪. الترند ≠ الخبر.</p>
+    <h3>إكس — السعودية (GetDayTrends غير رسمي)</h3>
+    <table>
+      <thead><tr><th>#</th><th>الموضوع</th><th>سبب قصير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>#gta6</td><td>إطلاق لعبة؛ الأقوى 24 ساعة</td></tr>
+        <tr><td>2</td><td>#الخميس_الونيس</td><td>وسم يوم</td></tr>
+        <tr><td>3</td><td>#٢٠٣٠_بلا_نقاب50</td><td>جدل اجتماعي</td></tr>
+        <tr><td>4</td><td>#مصرف_الراجحي</td><td>بنك</td></tr>
+        <tr><td>10</td><td>الانذار المبكر</td><td>صدى صواريخ الرياض</td></tr>
+        <tr><td>8</td><td>الرويلي</td><td>صدى القيادة المشتركة</td></tr>
+      </tbody>
+    </table>
+    <h3>إكس — مصر (GetDayTrends غير رسمي)</h3>
+    <table>
+      <thead><tr><th>#</th><th>الموضوع</th><th>سبب قصير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>#عيد_ميلاد_رئيس_مصر_التاريخي</td><td>مناسبة رئاسية على المنصة</td></tr>
+        <tr><td>2</td><td>GTA 6</td><td>اللعبة</td></tr>
+        <tr><td>4</td><td>انور السادات</td><td>صدى تكريم الكونغرس</td></tr>
+        <tr><td>—</td><td>#استغاثه_دفعه23_للسيسي</td><td>الأقوى 24 ساعة — ترند لا خبر</td></tr>
+      </tbody>
+    </table>
+    <h3>رديت — r/worldnews (صفحة ويب؛ r/popular أعاد 500)</h3>
+    <table>
+      <thead><tr><th>#</th><th>الموضوع</th><th>سبب قصير</th></tr></thead>
+      <tbody>
+        <tr><td>—</td><td>خيط أوكرانيا يوم 1730</td><td>تغطية مستمرة</td></tr>
+        <tr><td>—</td><td>خيط إيران/أمريكا #23</td><td>مستمر</td></tr>
+        <tr><td>—</td><td>منشور: جسر دونتس و3 طائرات نقل روسية</td><td>عنوان رديت لا وكالة</td></tr>
+      </tbody>
+    </table>
+    <h3>بحث جوجل — ترند رسمي 24 ساعة</h3>
+    <table>
+      <thead><tr><th>البلد</th><th>الموضوع</th><th>حجم</th></tr></thead>
+      <tbody>
+        <tr><td>السعودية</td><td>صدام حسين · الرياض · henry nicholls</td><td>+20ك / +20ك / +20ك</td></tr>
+        <tr><td>مصر</td><td>مجلس الوزراء · gta 6 · وزير التعليم</td><td>+50ك / +20ك / +5ك</td></tr>
+        <tr><td>أمريكا</td><td>twitch/GTA · Ella Langley · anthropic ipo</td><td>+500ك / +200ك / +100ك</td></tr>
+      </tbody>
+    </table>
+    <h3>تيك توك — ViralRemix غير رسمي 00:29 UTC</h3>
+    <table>
+      <thead><tr><th>#</th><th>الموضوع</th><th>سبب قصير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Jingle Bell Brazil Dance</td><td>34.4 ألف فيديو جديد/يوم</td></tr>
+        <tr><td>2</td><td>Ba Ba Ba Dance</td><td>26.2 ألف</td></tr>
+        <tr><td>3</td><td>Tsundere Hmph</td><td>24.3 ألف؛ صاعد</td></tr>
+      </tbody>
+    </table>
+    <p class="note">يوتيوب ترند بلا عناوين. فيسبوك · إنستغرام · واتساب · سناب · ثريدز · تلغرام · لينكدإن: لا ترتيب عام اليوم.</p>
+
+    <h2>ز) التقدير — ليس خبراً</h2>
+    <p>شنتشن رمزية أكثر من تسوية. مغادرة حاملة تخفّض العدد لا الاشتباك: ضرب قشم واعتراض البحرين/الكويت في اليوم نفسه. السوق تبقي برنت عند 92 لأن تدفق هرمز عاد قرب ما قبل الحرب. صواريخ الرياض مع شظايا تعيد كلفة اليمن إلى العاصمة. IISS: فتح هرمز بالقوة يصطدم بألغام. CSIS: حرب يمنية طويلة تعزّز الحوثي.</p>
+    <table>
+      <thead><tr><th>السيناريو</th><th>الإشارة</th><th>المانع</th></tr></thead>
+      <tbody>
+        <tr><td>هدنة ممرات مع خفض حاملات</td><td>مغادرة واشنطن + مسقط</td><td>ضرب قشم واعتراض الخليج</td></tr>
+        <tr><td>نفط هادئ رغم الحوادث</td><td>10.3 م ب/ي + مخزون أمريكا</td><td>ضرب منشأة خليجية</td></tr>
+        <tr><td>الرياض تثبّت الدفاع الجوي</td><td>اعتراض + تدمير منصات + كوبر</td><td>شظايا في العاصمة</td></tr>
+        <tr><td>شنتشن بلا بند أوكراني ملزم</td><td>مدة ≤ ساعة</td><td>سيبيها وأوروبا</td></tr>
+        <tr><td>وقف نار غزة يتآكل</td><td>أول توغل غرب الخط الأصفر</td><td>انهيار الترتيبات</td></tr>
+      </tbody>
+    </table>
+
+    <h2>قائمة الرصد الدائمة</h2>
+    <p class="note">الثقة لا تساوي الزيارات. أرقام أيار 2026 من Press Gazette/Similarweb. كل جولة تُفحص الوكالات + بي بي سي والجزيرة والعربية وسكاي وسبق وفرانس 24 عربي ورصد والمصري اليوم أو الأهرام.</p>
+    <table>
+      <thead><tr><th>الدرجة</th><th>المصادر</th></tr></thead>
+      <tbody>
+        <tr><td>وكالات</td><td>رويترز · أ ب · أ ف ب · بلومبرغ · واس · سنتكوم · UKMTO</td></tr>
+        <tr><td>عالمية واسعة</td><td>بي بي سي (894.7 م زيارة) · نيويورك تايمز (592.6 م) · سي إن إن (357.7 م) · وول ستريت جورنال · غارديان · فايننشال تايمز · فرانس 24 · دويتشه فيله · يورونيوز</td></tr>
+        <tr><td>عربية مهنية</td><td>الجزيرة (86.7 م، +69٪) · العربية · بي بي سي عربي · سي إن إن عربي · سكاي نيوز عربية · سبق · الشرق الأوسط · عرب نيوز · الاقتصادية · عكاظ · المصري اليوم · الأهرام · غلف نيوز · خليج تايمز</td></tr>
+        <tr><td>شبكات حرة</td><td>رصد · مدى مصر · العربي الجديد · رصيف22 · عنب بلدي · درج — ثقة أقل ما لم تؤيد وكالة</td></tr>
+        <tr><td>نبض منصات</td><td>إكس (GetDayTrends) · رديت r/popular وworldnews · جوجل ترند الرسمي · تيك توك موسوم · يوتيوب إن ظهرت قائمة. فيسبوك/إنستغرام/واتساب/سناب/ثريدز/تلغرام/لينكدإن: لا ترتيب عام</td></tr>
+      </tbody>
+    </table>
+
+    <h2>ح) مصادر</h2>
+    <ol class="src">
+      <li><a href="https://www.reuters.com/3fec1b0a85a0/world/china/trumps-historic-meeting-with-xi-putin-headlines-asia-trip-2026-11-18/">رويترز — ترامب وشي وأوكرانيا</a></li>
+      <li><a href="https://apnews.com/article/trump-xi-putin-nuclear-ukraine-iran-a04dc76ed8e786b087e2c1ea9598783a">أ ب — جدول شنتشن</a></li>
+      <li><a href="https://www.iranintl.com/en/202611193840">بلومبرغ عبر Iran Intl — مغادرة الحاملة</a></li>
+      <li><a href="https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/">سي بي إس — قشم وأدنوك</a></li>
+      <li><a href="https://adnocls.ae/en/news-and-media/press-releases/2026/november-17-statement">بيان أدنوك</a></li>
+      <li><a href="https://www.cnbc.com/2026/11/19/oil-brent-wti-price-hormuz.html">CNBC / رويترز — النفط 92</a></li>
+      <li><a href="https://spa.gov.sa/N2731164">واس — صواريخ الرياض</a> · <a href="https://sabq.org/article/rkfbq97">سبق</a></li>
+      <li><a href="https://www.alarabiya.net/saudi-today/2026/11/19/%D9%88%D9%84%D9%8A-%D8%A7%D9%84%D8%B9%D9%87%D8%AF-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D9%82%D8%A7%D8%A6%D8%AF-%D8%A7%D9%84%D9%82%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AC%D9%8A%D8%B4-%D8%A7%D9%84%D8%A7%D9%85%D9%8A%D8%B1%D9%83%D9%8A">العربية — ولي العهد وسنتكوم</a></li>
+      <li><a href="https://www.bbc.com/arabic">بي بي سي عربي</a> · <a href="https://www.bbc.com/news/articles/cw8r7510degno">بي بي سي — غزة</a></li>
+      <li><a href="https://www.aljazeera.net/">الجزيرة</a> · <a href="https://www.skynewsarabia.com/">سكاي</a> · <a href="https://www.france24.com/ar/">فرانس 24 عربي</a></li>
+      <li><a href="https://arabic.euronews.com/">يورونيوز عربي</a></li>
+      <li><a href="https://www.almasryalyoum.com/news/details/4414495">المصري اليوم — الدولار</a> · <a href="https://www.almasryalyoum.com/news/details/4413564">السيسي والمنتدى</a></li>
+      <li><a href="https://www.arabnews.com/finance/closing-bell-saudi-arabias-tasi-closes-052-lower-at-10200-3012708">عرب نيوز — تاسي</a> · <a href="https://www.argaam.com/ar/monitors/market-analytics/3">أرقام</a></li>
+      <li><a href="https://getdaytrends.com/saudi-arabia/">GetDayTrends السعودية</a> · <a href="https://getdaytrends.com/egypt/">مصر</a> · <a href="https://www.reddit.com/r/worldnews/">رديت</a> · <a href="https://trends.google.com/trending?geo=SA&hours=24">جوجل ترند</a> · <a href="https://viralremix.org/tiktok-trends/2026-11-19">تيك توك ViralRemix</a></li>
+      <li><a href="https://rassd.com/">شبكة رصد</a> (فُحصت؛ لا بند جيوسياسي مطابق) · <a href="https://www.madamasr.com/">مدى مصر</a> · <a href="https://www.alaraby.co.uk/">العربي الجديد</a> · <a href="https://raseef22.com/">رصيف22</a></li>
+    </ol>
+
+    <h2>ط) لم يُتحقق</h2>
+    <p class="note">أسماء الناقلات غير متطابقة. بيان أدنوك بلا اسم سفينة. ادعاء MQ-170 بلا تأكيد سنتكوم. حصيلة شظايا الرياض غير مكتملة. ادعاء الحديدة بلا تأكيد مستقل. نتيجة غرينلاند غير مقروءة. رويترز.com أعاد 401. رصد بلا بند اليوم. تاسي الخميس بلا رقم مؤشر حي. إكس وتيك توك غير رسميين. رديت popular أعاد 500. يوتيوب/ميتا/تلغرام بلا قائمة عامة.</p>
+    <footer>صفحة عامة على OpenBot Sites · تُستبدل بعد كل إحاطة · ليست تغطية مباشرة من الوكالات.</footer>
+  </div>
+  <script>
+    (function () {
+      var type = 'all';
+      var country = 'all';
+      var typeChips = document.getElementById('typeChips');
+      var countryChips = document.getElementById('countryChips');
+      var stories = document.querySelectorAll('#feed .story');
+      var meta = document.getElementById('filterMeta');
+      var total = stories.length;
+      function setOn(group, btn) {
+        group.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('on'); });
+        btn.classList.add('on');
+      }
+      function apply() {
+        var n = 0;
+        stories.forEach(function (el) {
+          var okT = type === 'all' || el.getAttribute('data-type') === type;
+          var okC = country === 'all' || (' ' + el.getAttribute('data-countries') + ' ').indexOf(' ' + country + ' ') !== -1;
+          var show = okT && okC;
+          el.hidden = !show;
+          if (show) n += 1;
+        });
+        meta.textContent = n + ' من ' + total + ' خبراً';
+      }
+      typeChips.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-type]');
+        if (!btn) return;
+        type = btn.getAttribute('data-type');
+        setOn(typeChips, btn);
+        apply();
+      });
+      countryChips.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-country]');
+        if (!btn) return;
+        country = btn.getAttribute('data-country');
+        setOn(countryChips, btn);
+        apply();
+      });
+    })();
+  </script>
+</body>
+</html>

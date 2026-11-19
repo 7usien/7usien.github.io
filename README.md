@@ -1,2 +1,6 @@
-# 7usien.github.io
-Public OSINT briefing host while OpenBot Sites replace_site is failing
+# إحاطة OSINT
+
+استضافة GitHub Pages لحين إصلاح OpenBot Sites (`replace_site` يعيد fetch failed).
+
+- https://7usien.github.io/
+- https://7usien.github.io/osint/
