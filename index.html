@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>إحاطة السبت 21 تشرين الثاني 2026</title>
+  <title>إحاطة الأحد 22 تشرين الثاني 2026</title>
   <style>
     :root {
       --bg: #0b1220; --panel: #121a2b; --line: #243049; --ink: #e8eef8;
@@ -32,7 +32,6 @@
     th { color: var(--mute); font-weight: 600; background: #0f1728; }
     tr:last-child td { border-bottom: 0; }
     a { color: #8ec5ff; }
-    .src { display: grid; gap: 6px; padding: 0; list-style: none; }
     footer { margin-top: 28px; color: var(--mute); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
     .chip { background: var(--panel); border: 1px solid var(--line); color: var(--ink);
@@ -48,30 +47,33 @@
   <div class="wrap">
     <header>
       <div class="kicker">OSINT · GitHub Pages</div>
-      <h1>إحاطة السبت 21 تشرين الثاني 2026</h1>
-      <p class="meta">القطع 11:00 الرياض (08:00 UTC). مقارنة مع الخميس 19. كل خبر مرة واحدة. <span class="up">19</span> صفاً · 18 مصدراً · 12 دولة.</p>
+      <h1>إحاطة الأحد 22 تشرين الثاني 2026</h1>
+      <p class="meta">القطع 22:52 الرياض (19:52 UTC). مقارنة مع السبت 21. كل خبر مرة واحدة. <span class="up">23</span> صفاً · 18 مصدراً · 14 دولة.</p>
     </header>
 
     <h2>رؤى القطع</h2>
     <div class="kpis">
-      <div class="kpi">الأخبار<b>19</b></div>
+      <div class="kpi">الأخبار<b>23</b></div>
       <div class="kpi">المصادر<b>18</b></div>
-      <div class="kpi">الدول<b>12</b></div>
-      <div class="kpi">المهيمن<b>شنتشن</b></div>
+      <div class="kpi">الدول<b>14</b></div>
+      <div class="kpi">المهيمن<b>البحرين</b></div>
     </div>
-    <p class="note">المهيمن: مخرجات شنتشن بلا اختراق، وتصعيد الرياض–الحديدة ملف موازٍ. عسكري 8 · دبلوماسي 6 · اقتصادي 3 · إنساني 1 · سياسي 1. مصر من الصفوف لا من الترند. بي بي سي 894.7 م · نيويورك تايمز 592.6 م · الجزيرة 86.7 م (Press Gazette أيار 2026).</p>
+    <p class="note">المهيمن: إصابات البحرين ومهلة ترامب حتى رأس السنة. بنغازي وتاسي تحت 10 آلاف ملفان موازيان. عسكري 13 · دبلوماسي 5 · إنساني 2 · اقتصادي 2 · سياسي 1. مصر من الصفوف لا من الترند. بي بي سي 894.7 م · نيويورك تايمز 592.6 م · الجزيرة 86.7 م (Press Gazette أيار 2026).</p>
 
     <h2>فلتر البلد والنوع</h2>
     <div class="chips" id="countryChips">
       <button class="chip on" data-country="all">الكل</button>
       <button class="chip" data-country="السعودية">السعودية</button>
       <button class="chip" data-country="اليمن">اليمن</button>
+      <button class="chip" data-country="مصر">مصر</button>
       <button class="chip" data-country="أمريكا">أمريكا</button>
       <button class="chip" data-country="إيران">إيران</button>
+      <button class="chip" data-country="البحرين">البحرين</button>
       <button class="chip" data-country="روسيا">روسيا</button>
       <button class="chip" data-country="أوكرانيا">أوكرانيا</button>
+      <button class="chip" data-country="ليبيا">ليبيا</button>
       <button class="chip" data-country="أوروبا">أوروبا</button>
-      <button class="chip" data-country="مصر">مصر</button>
+      <button class="chip" data-country="تركيا">تركيا</button>
       <button class="chip" data-country="الصين">الصين</button>
       <button class="chip" data-country="بريطانيا">بريطانيا</button>
       <button class="chip" data-country="عُمان">عُمان</button>
@@ -84,160 +86,97 @@
       <button class="chip" data-type="إنساني">إنساني</button>
       <button class="chip" data-type="سياسي">سياسي</button>
     </div>
-    <p id="filterMeta">19 من 19 خبراً</p>
+    <p id="filterMeta">23 من 23 خبراً</p>
     <div id="feed">
-      <article class="story" data-type="دبلوماسي" data-countries="أمريكا الصين روسيا"><div class="tag">محدَّث · دبلوماسي</div><p>قمة شنتشن نحو 70 دقيقة: اتفاق ضيق بلا اختراق نووي أو أوكراني أو إيراني. (أ ب)</p></article>
-      <article class="story" data-type="دبلوماسي" data-countries="أمريكا إيران روسيا"><div class="tag">جديد · دبلوماسي</div><p>الجمعة: «إعلان نحو السلام» بلا إيران ولا أوكرانيا. إيران لن تحصل على سلاح نووي والعرض غير مقبول. (أ ف ب / فرانس 24)</p></article>
-      <article class="story" data-type="عسكري" data-countries="إيران بريطانيا"><div class="tag">محدَّث · عسكري</div><p>UKMTO حتى 18 نوفمبر: العبور −65٪ و6 هجمات. (ميدل إيست آي)</p></article>
+      <article class="story" data-type="عسكري" data-countries="البحرين إيران أمريكا"><div class="tag">جديد · عسكري</div><p>البحرين: مواطن من ذوي الهمم حالته مستقرة، ومقيم باكستاني حالته حرجة، بعد ضرب السبت لمنشأة صناعية مدنية. الحرس يدّعي رادارات باتريوت في الرفاع والعوالي. (بوابة الوسط عن الداخلية وأ ف ب)</p></article>
+      <article class="story" data-type="دبلوماسي" data-countries="السعودية إيران البحرين"><div class="tag">جديد · دبلوماسي</div><p>الخارجية السعودية تدين الاعتداء وتحمّل إيران عواقب «اعتداءاتها الغاشمة». (بوابة الوسط / سبق)</p></article>
+      <article class="story" data-type="عسكري" data-countries="إيران بريطانيا"><div class="tag">محدَّث · عسكري</div><p>سي إن إن عن UKMTO: 22 هجوماً على الأقل في نوفمبر، وثلاث ناقلات الجمعة والسبت. الفاعل غير محسوم. (سي إن إن)</p></article>
+      <article class="story" data-type="عسكري" data-countries="إيران بريطانيا"><div class="tag">محدَّث · عسكري</div><p>263 سفينة بين 12 و18 نوفمبر، منها 37 ناقلة نفط مقابل 52. رقم −65٪ في قطع السبت مقياس آخر. (الجزيرة عن UKMTO)</p></article>
+      <article class="story" data-type="دبلوماسي" data-countries="أمريكا إيران"><div class="tag">جديد · دبلوماسي</div><p>ترامب لفوكس: يميل لضربات بعد رأس السنة، وإغراق السفن التي تكسر الحصار. (الأناضول / سبق)</p></article>
+      <article class="story" data-type="عسكري" data-countries="أمريكا إيران"><div class="tag">ادعاء ونفي · عسكري</div><p>إيران تقول إنها أصابت إف-16. سنتكوم: كل المقاتلات سليمة. (الجزيرة)</p></article>
+      <article class="story" data-type="عسكري" data-countries="إيران"><div class="tag">ادعاء · عسكري</div><p>الحرس: إسقاط MQ-1 شرق هرمز، العشرون منذ الحرب. (الجزيرة)</p></article>
       <article class="story" data-type="عسكري" data-countries="أمريكا إيران"><div class="tag">مستمر · عسكري</div><p>حاملتان بعد مغادرة جورج واشنطن. بلا تحديث موقع.</p></article>
       <article class="story" data-type="دبلوماسي" data-countries="عُمان إيران"><div class="tag">مستمر · دبلوماسي</div><p>قناة مسقط بلا إعلان اختراق جديد.</p></article>
-      <article class="story" data-type="دبلوماسي" data-countries="أمريكا أوكرانيا أوروبا"><div class="tag">محدَّث · دبلوماسي</div><p>ترامب يتصل باجتماع برلين: بحث إنهاء حرب أوكرانيا. (أ ب)</p></article>
-      <article class="story" data-type="عسكري" data-countries="أوكرانيا روسيا"><div class="tag">جديد · عسكري</div><p>كيرتش: كييف تقول إن الطريق سقط والسكك عُلّقت. بوتين: منشأة مدنية. (الجزيرة)</p></article>
-      <article class="story" data-type="دبلوماسي" data-countries="روسيا أوروبا"><div class="tag">جديد · دبلوماسي</div><p>ميدفيديف: «لا أحد يحتاج أوروبا». بوتين ما زال على خط ألاسكا. (الجزيرة)</p></article>
-      <article class="story" data-type="اقتصادي" data-countries="أوروبا أوكرانيا"><div class="tag">محدَّث · اقتصادي</div><p>شرائح 1.7 و8 و45 مليار يورو كما نقلت الجزيرة. رقم 135 من الخميس لم يُعد.</p></article>
-      <article class="story" data-type="دبلوماسي" data-countries="السعودية"><div class="tag">محدَّث · دبلوماسي</div><p>أضرار برج صندوق الاستثمارات بلا إصابات. الخارجية تؤكد حق الدفاع. (بي بي سي / سكاي عن واس)</p></article>
-      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">جديد · عسكري</div><p>فجر السبت: اعتراض 3 صواريخ باليستية نحو الرياض. (قنا / إندبندنت)</p></article>
-      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">جديد · عسكري</div><p>الجمعة: صاروخان نحو جازان وشظايا في الشقيق. الأرقام لا تُجمع مع ملخص المسيّرات. (العربية)</p></article>
-      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">جديد · عسكري</div><p>عملية الحديدة وصنعاء: إخلاء، 7 أهداف، 6 ورش. (إندبندنت / العربية)</p></article>
-      <article class="story" data-type="عسكري" data-countries="اليمن السعودية"><div class="tag">ادعاء · عسكري</div><p>سريع يهدد موانئ البحر الأحمر ومركز مدينة الملك عبدالله. (بي بي سي)</p></article>
-      <article class="story" data-type="إنساني" data-countries="اليمن"><div class="tag">ادعاء · إنساني</div><p>صحة الحوثيين: 19 قتيلاً على قارب نازحين. بلا تأكيد مستقل. (بي بي سي)</p></article>
+      <article class="story" data-type="دبلوماسي" data-countries="أمريكا الصين روسيا"><div class="tag">مستمر · دبلوماسي</div><p>شنتشن بلا اختراق، و«إعلان نحو السلام» لا يذكر إيران ولا أوكرانيا. بلا نص جديد.</p></article>
+      <article class="story" data-type="عسكري" data-countries="ليبيا روسيا أوكرانيا"><div class="tag">جديد · عسكري</div><p>بنغازي: حكومة الشرق ترجّح مسيّرات على سفينة روسية. أكسيوس ينسبها لكييف. لا تبنٍ رسمي. (عكاظ / الجزيرة / الأناضول)</p></article>
+      <article class="story" data-type="عسكري" data-countries="أوكرانيا روسيا"><div class="tag">مستمر · عسكري</div><p>كيرتش: لا متن وكالة جديد. آخر تفصيل في قطع السبت.</p></article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">جديد · عسكري</div><p>الأحد: اعتراض باليستي نحو الغرب ومسيّرتين نحو الرياض. إنذار مكة ثم زواله. (بي بي سي / الجزيرة)</p></article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">مستمر · عسكري</div><p>فجر السبت: اعتراض 3 صواريخ باليستية نحو الرياض. بلا حصيلة جديدة.</p></article>
+      <article class="story" data-type="إنساني" data-countries="اليمن"><div class="tag">ادعاء · إنساني</div><p>صحة الحوثيين عبر أ ب: 6 جرحى في محطة شركة النفط بصنعاء. (بي بي سي)</p></article>
+      <article class="story" data-type="عسكري" data-countries="السعودية"><div class="tag">تحقق · عسكري</div><p>فيديو خزانات جدة المتداول الأحد نُشر في 8 سبتمبر ويخص جازان. (سي إن إن عربي)</p></article>
+      <article class="story" data-type="إنساني" data-countries="اليمن"><div class="tag">جديد · إنساني</div><p>يونيسف: أكثر من 330 ألف نازح بينهم نحو 174 ألف طفل، و64 طفلاً قتيلاً منذ سبتمبر. (بي بي سي)</p></article>
       <article class="story" data-type="عسكري" data-countries="السعودية"><div class="tag">مستمر · عسكري</div><p>الرويلي قائداً للقوات المشتركة. بلا تحديث.</p></article>
-      <article class="story" data-type="اقتصادي" data-countries="مصر"><div class="tag">محدَّث · اقتصادي</div><p>الدولار في المركزي: 53.75 شراء / 53.85 بيع. (المصري اليوم)</p></article>
+      <article class="story" data-type="دبلوماسي" data-countries="السعودية"><div class="tag">مستمر · دبلوماسي</div><p>أضرار برج الصندوق بلا إصابات. عنوان رويترز للتحقق بلا متن.</p></article>
+      <article class="story" data-type="عسكري" data-countries="السعودية اليمن"><div class="tag">مستمر · عسكري</div><p>الحديدة: 7 أهداف و6 ورش من الجمعة. بلا حصيلة جديدة.</p></article>
+      <article class="story" data-type="اقتصادي" data-countries="مصر"><div class="tag">محدَّث · اقتصادي</div><p>الدولار في المركزي: 53.74 شراء / 53.88 بيع. (المصري اليوم)</p></article>
       <article class="story" data-type="اقتصادي" data-countries="مصر"><div class="tag">مستمر · اقتصادي</div><p>نمو 5.1٪ واحتياطي 57.5 مليار دولار. بلا رقم جديد.</p></article>
-      <article class="story" data-type="سياسي" data-countries="أوروبا"><div class="tag">عنوان · سياسي</div><p>كوب 31 امتدت إلى السبت بعد مسودة أسقطت الوقود الأحفوري. عنوان أ ف ب لا متن.</p></article>
+      <article class="story" data-type="سياسي" data-countries="أوروبا تركيا"><div class="tag">جديد · سياسي</div><p>كوب 31 اختُتم في أنطاليا بلا اتفاق. الاتحاد رفض مسودة بلا الوقود الأحفوري. (فرانس 24)</p></article>
     </div>
 
-    <h2>أسواق — إغلاق الجمعة / تاسي الخميس</h2>
+    <h2>أسواق — إغلاق الجمعة للنفط / تاسي الأحد</h2>
     <table>
       <thead><tr><th>الأصل</th><th>السعر</th><th>التغير</th><th>المصدر</th></tr></thead>
       <tbody>
         <tr><td>برنت يناير 2027</td><td>92.49</td><td class="up">+0.51 (+0.55٪)</td><td>Investing · مغلق 20/11</td></tr>
-        <tr><td>برنت (طباعة ثانية)</td><td>92.57</td><td class="up">+0.59</td><td>APA · 05:37 UTC</td></tr>
-        <tr><td>غرب تكساس يناير 2027</td><td>83.41</td><td class="up">+0.97 (+1.18٪)</td><td>APA</td></tr>
         <tr><td>غرب تكساس (شريط)</td><td>82.40</td><td class="up">+1.12٪</td><td>Investing مشتق</td></tr>
-        <tr><td>ذهب عقود</td><td>3,539</td><td class="down">−3.98٪</td><td>شريط Investing</td></tr>
-        <tr><td>ذهب جدول</td><td>3,515.40</td><td class="down">−15.40</td><td>Report.az · سلسلة أخرى</td></tr>
-        <tr><td>تاسي</td><td>10,158.9</td><td class="down">−41.26 (−0.40٪)</td><td>مباشر · إغلاق الخميس</td></tr>
+        <tr><td>ذهب شريط</td><td>3,539</td><td class="down">−3.98٪</td><td>شريط Investing</td></tr>
+        <tr><td>ذهب ديسمبر</td><td>3,515.40</td><td class="down">−4.62٪</td><td>ياهو GC=F · 20/11 · سلسلة أخرى</td></tr>
+        <tr><td>تاسي</td><td>9,960.44</td><td class="down">−198.46 (−1.95٪)</td><td>واس · إغلاق الأحد</td></tr>
       </tbody>
     </table>
-    <p class="note">الرقمان لا يُدمجان. سبق: الذهب يتراجع حاداً بلا رقم. تاسي مغلق الجمعة والسبت. قيمة الخميس 2.97 مليار ريال. 75 مرتفعة / 183 هابطة. لوحة العشرة لم تُقرأ من تداول. مباشر سمّى: جرير +2.76٪ إلى 17.9، عناية +2.38٪، المتقدمة +2.30٪، جاز +2.29٪ إلى 13.85. هبوط: تهامة −5.92٪ إلى 14.77، رؤوم −5.13٪، الإعادة السعودية −5.08٪، أديس −3.57٪، الأبحاث والإعلام −3.46٪.</p>
+    <p class="note">جلسة نيويورك لم تُفتح (02:00 الاثنين الرياض). 89.95 على ياهو عقد مالي آخر لا يُستبدل بـ 92.49. تاسي: 29 مرتفعة / 238 هابطة · 2.40 مليار ريال.</p>
+    <h3>الأعلى</h3>
+    <table>
+      <thead><tr><th></th><th>الشركة</th><th>السعر</th><th>التغير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>طباعة وتغليف</td><td>42.70</td><td class="up">+9.99٪</td></tr>
+        <tr><td>2</td><td>الفخارية</td><td>44.00</td><td class="up">+9.84٪</td></tr>
+        <tr><td>3</td><td>درب السعودية</td><td>1.92</td><td class="up">+9.71٪</td></tr>
+        <tr><td>4</td><td>الصناعات الكهربائية</td><td>10.93</td><td class="up">+3.90٪</td></tr>
+        <tr><td>5</td><td>الأسماك</td><td>54.20</td><td class="up">+2.26٪</td></tr>
+        <tr><td>6</td><td>CARE</td><td>114.50</td><td class="up">+2.23٪</td></tr>
+        <tr><td>7</td><td>GAS</td><td>14.10</td><td class="up">+1.81٪</td></tr>
+        <tr><td>8</td><td>ARTEX</td><td>8.29</td><td class="up">+1.72٪</td></tr>
+        <tr><td>9</td><td>SPM</td><td>45.20</td><td class="up">+1.71٪</td></tr>
+        <tr><td>10</td><td>BURGERIZZR</td><td>5.69</td><td class="up">+1.61٪</td></tr>
+      </tbody>
+    </table>
+    <h3>الأدنى</h3>
+    <table>
+      <thead><tr><th></th><th>الشركة</th><th>السعر</th><th>التغير</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>يو سي آي سي</td><td>25.72</td><td class="down">−9.88٪</td></tr>
+        <tr><td>2</td><td>أسترا الصناعية</td><td>111.90</td><td class="down">−5.97٪</td></tr>
+        <tr><td>3</td><td>تهامة</td><td>13.90</td><td class="down">−5.89٪</td></tr>
+        <tr><td>4</td><td>الاتحاد</td><td>4.48</td><td class="down">−5.88٪</td></tr>
+        <tr><td>5</td><td>الكثيري</td><td>10.69</td><td class="down">−5.15٪</td></tr>
+        <tr><td>6</td><td>MARAFIQ</td><td>43.68</td><td class="down">−5.04٪</td></tr>
+        <tr><td>7</td><td>MALATH INSURANCE</td><td>8.30</td><td class="down">−4.93٪</td></tr>
+        <tr><td>8</td><td>ALARABIA</td><td>42.54</td><td class="down">−4.79٪</td></tr>
+        <tr><td>9</td><td>جرير</td><td>17.05</td><td class="down">−4.75٪</td></tr>
+        <tr><td>10</td><td>THIMAR</td><td>25.70</td><td class="down">−4.74٪</td></tr>
+      </tbody>
+    </table>
 
     <h2>أ) خمس نوافذ</h2>
     <ol class="windows">
-      <li>شنتشن بلا اختراق، ثم «إعلان نحو السلام» يخلو من إيران وأوكرانيا. (أ ب / أ ف ب)</li>
-      <li>فجر السبت: 3 باليستي نحو الرياض بعد عملية الحديدة. (قنا / إندبندنت)</li>
-      <li>برج الصندوق في المركز المالي تضرر بلا إصابات، والخارجية تؤكد حق الدفاع. (بي بي سي / سكاي عن واس)</li>
-      <li>UKMTO: عبور المضيق نحو −65٪ و6 هجمات حتى 18 نوفمبر. (ميدل إيست آي)</li>
-      <li>برنت 92.49. الذهب يتراجع على الشريط بلا سلسلة موحّدة. (Investing / سبق)</li>
+      <li>البحرين: جريحان، والرياض تحمّل طهران العواقب.</li>
+      <li>ترامب: ضربات بعد رأس السنة أو إغراق كاسري الحصار.</li>
+      <li>هرمز: 22 هجوماً في نوفمبر، وبرنت ما زال 92.49 إغلاق الجمعة.</li>
+      <li>الرياض: اعتراض الأحد، وفيديو جدة قديم.</li>
+      <li>بنغازي: ترجيح مسيرات على سفينة روسية بلا تبنٍ رسمي.</li>
     </ol>
-
-    <h2>ب) أمريكا / إيران / هرمز</h2>
-    <table>
-      <thead><tr><th>الواقعة</th><th>الحالة</th><th>المصدر</th><th>الثقة</th></tr></thead>
-      <tbody>
-        <tr><td>70 دقيقة. اتفاق: إصلاح الأمم المتحدة، وقود أحفوري، تقييد الجنائية. شي إيجابي. بوتين: صريح.</td><td>محدَّث</td><td>أ ب</td><td>عالية</td></tr>
-        <tr><td>إعلان سلام بلا الحربين. نزع السلاح غير مضمون. عرض إيران غير مقبول ولن تحصل على سلاح نووي.</td><td>جديد</td><td>أ ف ب / فرانس 24</td><td>عالية للتصريح</td></tr>
-        <tr><td>6 هجمات (4 مضيق، 2 خليج). 115 صادراً و148 وارداً. باب المندب بلا هجوم هذا الأسبوع وعبوره −22٪ عن ما قبل 22 تموز.</td><td>محدَّث</td><td>ميدل إيست آي عن UKMTO</td><td>متوسطة–عالية</td></tr>
-        <tr><td>روزفلت وبوش تبقيان. قناة مسقط بلا جديد.</td><td>مستمر</td><td>قطع 19</td><td>لا تحديث موقع</td></tr>
-      </tbody>
-    </table>
-
-    <h2>ج) روسيا / أوكرانيا / أوروبا</h2>
-    <table>
-      <thead><tr><th>الواقعة</th><th>الحالة</th><th>المصدر</th><th>الثقة</th></tr></thead>
-      <tbody>
-        <tr><td>اتصال ترامب ببرلين: بحث إنهاء الحرب مع شي وبوتين.</td><td>محدَّث</td><td>أ ب عن ويتكوف</td><td>عالية</td></tr>
-        <tr><td>كيرتش 16–19: الطريق سقط والسكك عُلّقت حسب كييف. بوتين: مدني.</td><td>جديد</td><td>الجزيرة</td><td>متوسطة–عالية</td></tr>
-        <tr><td>«لا أحد يحتاج أوروبا». مقترحات ألاسكا ما زالت الخط المنقول.</td><td>جديد</td><td>الجزيرة</td><td>عالية للجملة</td></tr>
-        <tr><td>1.7 مليار من قرض 90، و8 من المرفق، واتفاق على جمع 45.</td><td>محدَّث</td><td>الجزيرة</td><td>متوسطة–عالية</td></tr>
-      </tbody>
-    </table>
-
-    <h2>د) الخليج والسعودية</h2>
-    <table>
-      <thead><tr><th>الواقعة</th><th>الحالة</th><th>المصدر</th><th>الثقة</th></tr></thead>
-      <tbody>
-        <tr><td>برج الصندوق: طوابق ومبانٍ مجاورة، بلا إصابات. الخارجية تدين.</td><td>محدَّث</td><td>بي بي سي / سكاي عن واس</td><td>عالية</td></tr>
-        <tr><td>3 باليستي نحو الرياض فجر السبت. زوال إنذار الدفاع المدني.</td><td>جديد</td><td>قنا / إندبندنت</td><td>عالية</td></tr>
-        <tr><td>صاروخان نحو جازان وشظايا الشقيق. بيانات الجمعة لا تُجمع.</td><td>جديد</td><td>العربية / قنا</td><td>عالية لكل بيان</td></tr>
-        <tr><td>إخلاء الحديدة، 7 أهداف، 6 ورش، مستودع صنعاء.</td><td>جديد</td><td>إندبندنت / العربية</td><td>عالية للنص</td></tr>
-        <tr><td>ادعاء تهديد الموانئ ومركز مدينة الملك عبدالله.</td><td>ادعاء</td><td>بي بي سي</td><td>التهديد مؤكد النقل</td></tr>
-        <tr><td>ادعاء 19 قتيلاً على قارب. الرويلي مستمر بلا تحديث.</td><td>ادعاء / مستمر</td><td>بي بي سي / واس سابق</td><td>القارب منخفض</td></tr>
-      </tbody>
-    </table>
-
-    <h2>هـ) العالم ومصر</h2>
-    <table>
-      <thead><tr><th>الواقعة</th><th>الحالة</th><th>المصدر</th><th>الثقة</th></tr></thead>
-      <tbody>
-        <tr><td>مصر: المركزي 53.75 / 53.85. البنوك الكبرى 53.77 / 53.87.</td><td>محدَّث</td><td>المصري اليوم</td><td>عالية</td></tr>
-        <tr><td>نمو 5.1٪ واحتياطي 57.5 ملياراً. بلا رقم جديد.</td><td>مستمر</td><td>المصري اليوم 18 نوفمبر</td><td>عالية للسابق</td></tr>
-        <tr><td>كوب 31 إلى السبت ومسودة بلا وقود أحفوري.</td><td>عنوان</td><td>أ ف ب</td><td>متوسطة</td></tr>
-      </tbody>
-    </table>
-    <p class="note">لا بند جديد عن غزة أو غرينلاند أو لينا عطالله. رصد فُحصت بلا بند مؤرخ.</p>
 
     <h2>و) نبض المنصات — ليس خبراً</h2>
-    <p class="note">GWI Q2 2026: فيسبوك 58.1٪ · إنستغرام 56.6٪ · يوتيوب 56.2٪ · واتساب 54.9٪ · تيك توك 36.1٪.</p>
-    <h3>إكس السعودية — GetDayTrends</h3>
-    <table>
-      <thead><tr><th></th><th>الموضوع</th><th>لماذا</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>النصر</td><td>كرة · 133.7 ألف</td></tr>
-        <tr><td>4</td><td>ميناء الحديده</td><td>صدى العملية · 46.2 ألف</td></tr>
-        <tr><td>8</td><td>#٢٠٣٠_بلا_نقاب52</td><td>جدل مستمر</td></tr>
-      </tbody>
-    </table>
-    <h3>إكس مصر</h3>
-    <table>
-      <thead><tr><th></th><th>الموضوع</th><th>لماذا</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>21 نوفمبر 2026</td><td>تاريخ اليوم</td></tr>
-        <tr><td>3</td><td>#الاهلي_النصر</td><td>كرة · 24.4 ألف</td></tr>
-        <tr><td>5</td><td>ميناء الحديده</td><td>الملف اليمني على إكس مصر</td></tr>
-      </tbody>
-    </table>
-    <h3>جوجل ترند 24 ساعة</h3>
-    <table>
-      <thead><tr><th>البلد</th><th>الأعلى</th><th>الحجم</th></tr></thead>
-      <tbody>
-        <tr><td>السعودية</td><td>الأهلي ضد النصر · ميناء الحديدة · عراقجي</td><td>+100 ألف / +10 آلاف / +1 ألف</td></tr>
-        <tr><td>مصر</td><td>أهلي جدة–النصر · كسوف</td><td>+50 ألف / +5 آلاف</td></tr>
-        <tr><td>أمريكا</td><td>فرضية ريمان · زلزال لوس أنجلوس</td><td>+200 ألف لكل</td></tr>
-      </tbody>
-    </table>
-    <p class="note">رديت r/worldnews (صفحة لا JSON): زيلينسكي يصف بوتين بقاتل؛ عنوان عن انفجارات الرياض — ليس وكيلاً. r/popular بلا قائمة إخبارية في اللقطة. تيك توك ViralRemix: Jingle Bell Brazil 37.2 ألف/يوم. يوتيوب لم يُفتح. فيسبوك وإنستغرام وواتساب وسناب وثريدز وتلغرام ولينكدإن: لا ترتيب عام.</p>
+    <p>إكس السعودية: اليونايتد و#٢٠٣٠_بلا_نقاب53 وبنغازي في المرتبة 30. إكس مصر: بنغازي و#اقاله_وزير_الصحه. جوجل السعودية: برشلونة–فياريال +50 ألفاً، والمشهد اليمني +1 ألف. مصر: برشلونة +100 ألف ومدبولي +20 ألفاً. أمريكا: ستيلرز–إيغلز +500 ألف. رديت: عنوان واحد عن سفينة ليبيا لا يُرفع خبراً. تيك توك (ViralRemix غير رسمي): رقصات. يوتيوب لم يُفتح. فيسبوك وإنستغرام وواتساب وسناب وثريدز وتلغرام ولينكدإن بلا ترتيب عام.</p>
+    <p class="note">GWI الربع الثاني 2026 عبر DataReportal: فيسبوك 58.1٪ · إنستغرام 56.6٪ · يوتيوب 56.2٪ · واتساب 54.9٪ · تيك توك 36.1٪.</p>
 
     <h2>ز) التقدير — ليس خبراً</h2>
-    <p>شنتشن أغلقت الصورة ولم تغلق هرمز ولا أوكرانيا. برنت قرب 92 بينما عبور UKMTO أقل بنحو 65٪ من ما قبل الحرب: مقياسان لم يُقرأا في وثيقة واحدة. الرياض انتقلت من «شظايا تُحصر» إلى برج مسمّى بلا إصابات ثم إخلاء الحديدة. IISS وCSIS وRAND تبقى إطار أكتوبر/سبتمبر لا تقريراً جديداً.</p>
-    <table>
-      <thead><tr><th>السيناريو</th><th>الإشارة</th><th>المانع</th></tr></thead>
-      <tbody>
-        <tr><td>صفقة هرمز</td><td>طهران تريد اتفاقاً</td><td>العرض غير مقبول والعبور −65٪</td></tr>
-        <tr><td>نفط قرب 92</td><td>إغلاق 92.49</td><td>إصابة منشأة</td></tr>
-        <tr><td>ضرب مصادر الإطلاق</td><td>7 أهداف و6 ورش</td><td>شظايا الشقيق وتهديد المركز المالي</td></tr>
-        <tr><td>كيرتش بلا بند شنتشن</td><td>تعليق السكك حسب كييف</td><td>بوتين يسمّيه مدنياً</td></tr>
-      </tbody>
-    </table>
+    <p>الجريحان في البحرين ومهلة رأس السنة هما ما تغيّر منذ السبت. تاسي أغلق تحت 10 آلاف لأن السوق السعودية كانت مفتوحة، بينما برنت ما زال على إغلاق الجمعة. مقياسا UKMTO (عدّ الشهر وعدد السفن) لا يُلغيان رقم السبت. بنغازي يوسّع الحرب إلى المتوسط فقط إذا ثبتت الجهة، والنص الحالي لا يحسمها.</p>
 
-    <h2>ح) مصادر</h2>
-    <ol class="src">
-      <li><a href="https://apnews.com/article/trump-xi-putin-nuclear-ukraine-iran-a04dc76ed8e786b087e2c1ea9598783a">أ ب — الثلاثية</a></li>
-      <li><a href="https://www.afp.com/en/trump-faces-tumult-home-after-xi-putin-embarrassment">أ ف ب — مؤتمر الجمعة</a></li>
-      <li><a href="https://www.france24.com/ar/">فرانس 24 عربي</a> · <a href="https://www.aljazeera.com/news/2026/11/20/ukraine-strikes-kerch-bridge-as-putin-ally-declares-no-one-needs">الجزيرة — كيرتش</a></li>
-      <li><a href="https://www.bbc.com/arabic/articles/cqy7rxexp1x0o">بي بي سي عربي — الرياض والحديدة</a></li>
-      <li><a href="https://www.alarabiya.net/">العربية</a> · <a href="https://www.skynewsarabia.com/middle-east/1905870-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%AA%D8%AF%D9%8A%D9%86-%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1%D8%A7%D8%AA-%D8%A7%D9%84%D8%AD%D9%88%D8%AB%D9%8A%D9%8A%D9%86-%D9%85%D9%86%D8%B4%D8%A2%D8%AA-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6">سكاي عن واس</a> · <a href="https://sabq.org/">سبق</a></li>
-      <li><a href="https://www.almasryalyoum.com/news/details/4416067">المصري اليوم — الدولار</a></li>
-      <li><a href="https://www.middleeasteye.net/live-blog/live-blog-update/ukmto-weekly-report-says-six-vessels-attacked-and-around-hormuz">UKMTO عبر ميدل إيست آي</a> · <a href="https://www.investing.com/commodities/brent-oil">برنت</a></li>
-      <li><a href="https://rassd.com/">رصد</a> فُحصت بلا بند مؤرخ · <a href="https://getdaytrends.com/saudi-arabia/">إكس السعودية</a> · <a href="https://getdaytrends.com/egypt/">إكس مصر</a></li>
-    </ol>
-
-    <h2>ط) لم يُتحقق</h2>
-    <p class="note">متن رويترز محجوب. برنت 92.49 و92.57 لم يُحسما. ذهب سلسلتان. لوحة تاسي العشرة غير مقروءة. ادعاء القارب بلا تأكيد. غزة وغرينلاند ولينا عطالله بلا تحديث. يوتيوب لم يُفتح. عنوان رديت عن الرياض ليس وكيلاً.</p>
-
-    <h2>قائمة الرصد</h2>
-    <p class="note">الثقة لا تساوي الزيارات. بي بي سي 894.7 مليون · نيويورك تايمز 592.6 · سي إن إن 357.7 · الجزيرة 86.7 (+69٪) أيار 2026. كل جولة: وكالة، بي بي سي، الجزيرة، العربية، سكاي، سبق، فرانس 24 عربي، رصد، المصري اليوم أو الأهرام.</p>
-    <footer>صفحة عامة على GitHub Pages · تُحدَّث مع روتين كل يومين · ليست OpenBot Sites.</footer>
+    <footer>
+      GitHub Pages · https://7usien.github.io/osint/ · القطع 22:52 الرياض 22 تشرين الثاني 2026. رصد فُحصت بلا بند. متن رويترز محجوب. لا يُستبدل عقد برنت 92.49 بطباعة 89.95.
+    </footer>
   </div>
   <script>
     (function () {
