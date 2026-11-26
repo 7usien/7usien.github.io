@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رادار أفكار SaaS والذكاء الاصطناعي — الخليج العربي (تقرير مُحدّث باستمرار)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --primary: #0f4c81;
+      --primary-light: #e0f2fe;
+      --accent: #059669;
+      --accent-soft: #d1fae5;
+      --warn: #d97706;
+      --warn-soft: #fef3c7;
+      --danger: #dc2626;
+      --danger-soft: #fee2e2;
+      --purple: #6d28d9;
+      --purple-soft: #ede9fe;
+      --shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b2545 0%, #134074 55%, #0e7490 100%);
+      color: #ffffff;
+      padding: 42px 20px 56px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      color: #dbeafe;
+      font-size: 1rem;
+    }
+
+    .update-pill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      margin-top: -28px;
+      padding: 0 20px;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .kpi-label {
+      font-size: 0.85rem;
+      color: var(--subtle);
+      font-weight: 600;
+    }
+
+    .kpi-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-top: 4px;
+    }
+
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    main {
+      padding: 26px 20px 64px;
+    }
+
+    .notice-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-right: 5px solid #d97706;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      font-size: 0.92rem;
+      color: #78350f;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 26px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow-x: auto;
+      margin-bottom: 28px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 780px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: right;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    th {
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f8fafc; }
+
+    .controls {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .filters-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .input-control {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .input-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.12);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .idea-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .idea-card.top5-card {
+      border-top: 4px solid var(--accent);
+    }
+
+    .idea-card.excluded-card {
+      border-top: 4px solid var(--danger);
+      background: #fffdfd;
+    }
+
+    .idea-card.deferred-card {
+      border-top: 4px solid var(--warn);
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .badge-top5 { background: #dcfce7; color: #166534; }
+    .badge-valid { background: #e0f2fe; color: #075985; }
+    .badge-excluded { background: var(--danger-soft); color: #991b1b; }
+    .badge-deferred { background: var(--warn-soft); color: #92400e; }
+    .badge-seg { background: var(--purple-soft); color: var(--purple); }
+    .badge-cat { background: #f1f5f9; color: #334155; }
+    .badge-date { background: #f8fafc; color: #64748b; border: 1px solid var(--border); }
+
+    .idea-title {
+      margin: 0;
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .idea-en {
+      font-size: 0.85rem;
+      color: var(--subtle);
+      direction: ltr;
+      display: inline-block;
+      margin-top: 2px;
+    }
+
+    .metrics-panel {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .metric-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      min-width: 138px;
+      text-align: center;
+    }
+
+    .metric-box .m-label {
+      font-size: 0.74rem;
+      color: var(--subtle);
+      font-weight: 700;
+    }
+
+    .metric-box .m-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    .metric-box.prob-high .m-val { color: var(--accent); }
+    .metric-box.prob-mid .m-val { color: var(--warn); }
+    .metric-box.prob-low .m-val { color: var(--danger); }
+
+    .progress-track {
+      height: 7px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .criteria-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin: 14px 0;
+      padding: 12px;
+      background: var(--surface-soft);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .crit-item {
+      font-size: 0.82rem;
+    }
+
+    .crit-head {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .info-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+    }
+
+    .info-block strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.84rem;
+      margin-bottom: 4px;
+    }
+
+    .info-block.comp-block {
+      background: #fdf4ff;
+      border-color: #f5d0fe;
+    }
+
+    .info-block.comp-block strong { color: #86198f; }
+
+    .info-block.excl-block {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .info-block.excl-block strong { color: #991b1b; }
+
+    details {
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 11px 16px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary);
+      background: #f1f5f9;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "▼"; font-size: 0.75rem; transition: transform 0.2s; }
+    details[open] summary::after { transform: rotate(180deg); }
+
+    .details-body {
+      padding: 16px;
+    }
+
+    .swot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .swot-box {
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.87rem;
+      border: 1px solid transparent;
+    }
+
+    .swot-s { background: #ecfdf5; border-color: #a7f3d0; }
+    .swot-w { background: #fef2f2; border-color: #fecaca; }
+    .swot-o { background: #eff6ff; border-color: #bfdbfe; }
+    .swot-t { background: #fffbeb; border-color: #fde68a; }
+
+    .swot-box h4 {
+      margin: 0 0 6px;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--subtle);
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px 20px;
+      color: var(--subtle);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    @media (max-width: 640px) {
+      .card-header { flex-direction: column; }
+      .metrics-panel { width: 100%; }
+      .metric-box { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div>
+          <h1>رادار أفكار SaaS والذكاء الاصطناعي — الخليج العربي</h1>
+          <p>لوحة مرجعية حيّة ومُحدّثة تراكمياً للأفكار المُحقَّقة ميدانياً (Valid Ideas) والمستبعدة لمنع التكرار، مع المنافسين الفعليين، معايير التقييم، نسب النجاح التقديرية، تحليل SWOT، ونموذج العمل والربح.</p>
+        </div>
+        <div class="update-pill">آخر تحديث: 2026-11-26</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">إجمالي الأفكار المفحوصة</div>
+        <div class="kpi-value">11</div>
+        <div class="kpi-sub">محفوظة بقاعدة البيانات لمنع التكرار</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">الأفكار المُحقَّقة (Valid Ideas)</div>
+        <div class="kpi-value" style="color: var(--accent);">7</div>
+        <div class="kpi-sub">اجتازت فحص المنافسة والاحتياج</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">أفضل 5 أفكار للبدء (Top 5)</div>
+        <div class="kpi-value" style="color: var(--purple);">5</div>
+        <div class="kpi-sub">مناسبة للبدء بالخليج والتوسع والدخل الجانبي</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">المستبعدة / المؤجّلة بعد الفحص</div>
+        <div class="kpi-value" style="color: var(--danger);">4</div>
+        <div class="kpi-sub">محفوظة مع أسباب الاستبعاد لتفادي إضاعة الوقت</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="notice-box">
+      <strong>ملاحظة منهجية مهمة:</strong> أسماء المنافسين وأسعارهم والشكاوى المرصودة هي <strong>وقائع ميدانية مُحقّقة</strong>، بينما <strong>نسب النجاح التقديرية (%) وأسعار الباقات المقترحة</strong> هي <strong>تقديرات تحليلية مشروطة</strong> بتنفيذ اختبار التحقق خلال 7 أيام والالتزام بشرط التميز الموضح داخل كل بطاقة.
+    </div>
+
+    <h2 class="section-title">📊 جدول المقارنة السريع للأفكار المُحقَّقة (Valid Ideas)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>الفكرة</th>
+            <th>النوع</th>
+            <th>التقييم (/20)</th>
+            <th>نسبة النجاح التقديرية</th>
+            <th>أبرز المنافسين المرصودين</th>
+            <th>ملاءمتها كدخل جانبي</th>
+          </tr>
+        </thead>
+        <tbody id="summary-table-body"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">🗂️ استعراض وتصفية كل الأفكار (القديم + الجديد)</h2>
+    <div class="controls">
+      <div class="tabs" id="status-tabs">
+        <button class="tab-btn active" data-filter="all">الكل (11)</button>
+        <button class="tab-btn" data-filter="top5">⭐ أفضل 5 مرشّحة (5)</button>
+        <button class="tab-btn" data-filter="validated">✅ المُحقَّقة (7)</button>
+        <button class="tab-btn" data-filter="excluded">🚫 المستبعدة والمؤجّلة (4)</button>
+      </div>
+      <div class="filters-right">
+        <select id="segment-filter" class="input-control">
+          <option value="all">كل الأنواع (B2B / B2C)</option>
+          <option value="B2B">B2B فقط</option>
+          <option value="B2C">B2C فقط</option>
+          <option value="B2B / B2C">مزيج B2B / B2C</option>
+        </select>
+        <select id="sort-by" class="input-control">
+          <option value="rank">الترتيب الموصى به</option>
+          <option value="score">الأعلى تقييماً (/20)</option>
+          <option value="prob">الأعلى نسبة نجاح (%)</option>
+          <option value="date">الأحدث تحديثاً</option>
+        </select>
+        <input id="search-input" class="input-control" type="search" placeholder="ابحث في الأفكار أو المنافسين..." />
+      </div>
+    </div>
+
+    <div id="cards-container" class="cards-grid"></div>
+  </main>
+
+  <footer>
+    تقرير رادار فرص SaaS والذكاء الاصطناعي للخليج العربي — يُحدَّث تلقائياً من قاعدة البيانات التراكمية بعد كل جلسة بحث دون حذف الأرشيف السابق.
+  </footer>
+
+  <script src="./ideas-data.js?v=2026-11-26"></script>
+  <script>
+    const IDEAS = window.IDEAS || [];
+
+    let currentStatus = "all";
+    let currentSegment = "all";
+    let currentSort = "rank";
+    let searchQuery = "";
+
+    function esc(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function probClass(p) {
+      if (p >= 72) return "prob-high";
+      if (p >= 50) return "prob-mid";
+      return "prob-low";
+    }
+
+    function probColor(p) {
+      if (p >= 72) return "#059669";
+      if (p >= 50) return "#d97706";
+      return "#dc2626";
+    }
+
+    function renderSummaryTable() {
+      const tbody = document.getElementById("summary-table-body");
+      const valid = IDEAS.filter(i => i.status === "validated").sort((a, b) => (a.rank_order || 999) - (b.rank_order || 999));
+      tbody.innerHTML = valid.map((item, idx) => `
+        <tr>
+          <td><strong>#${idx + 1}</strong></td>
+          <td>
+            <strong>${esc(item.title_ar)}</strong>
+            ${item.is_top5 ? '<span class="badge badge-top5" style="margin-right:6px;">Top 5</span>' : ''}
+          </td>
+          <td><span class="badge badge-seg">${esc(item.segment_type)}</span></td>
+          <td><strong>${item.total_score} / 20</strong></td>
+          <td>
+            <strong style="color:${probColor(item.success_probability_pct)}">${item.success_probability_pct}%</strong>
+            <div class="progress-track" style="width:90px;">
+              <div class="progress-fill" style="width:${item.success_probability_pct}%; background:${probColor(item.success_probability_pct)};"></div>
+            </div>
+          </td>
+          <td style="max-width:260px; font-size:0.84rem; color:#475569;">${esc(item.competitors)}</td>
+          <td style="max-width:240px; font-size:0.84rem;">${esc(item.side_income_fit)}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderCards() {
+      const container = document.getElementById("cards-container");
+      const q = searchQuery.trim().toLowerCase();
+
+      let list = IDEAS.filter(item => {
+        if (currentStatus === "top5" && !item.is_top5) return false;
+        if (currentStatus === "validated" && item.status !== "validated") return false;
+        if (currentStatus === "excluded" && item.status !== "excluded" && item.status !== "deferred") return false;
+        if (currentSegment !== "all" && item.segment_type !== currentSegment) return false;
+        if (q) {
+          const hay = [
+            item.title_ar, item.title_en, item.category, item.summary,
+            item.selection_reason, item.competitors, item.market_gap, item.exclusion_reason
+          ].join(" ").toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      list.sort((a, b) => {
+        if (currentSort === "score") return (b.total_score || 0) - (a.total_score || 0);
+        if (currentSort === "prob") return (b.success_probability_pct || 0) - (a.success_probability_pct || 0);
+        if (currentSort === "date") return String(b.updated_at || "").localeCompare(String(a.updated_at || ""));
+        return (a.rank_order || 999) - (b.rank_order || 999);
+      });
+
+      if (!list.length) {
+        container.innerHTML = '<div class="empty-state">لا توجد أفكار مطابقة لخيارات التصفية الحالية.</div>';
+        return;
+      }
+
+      container.innerHTML = list.map(item => {
+        const isValid = item.status === "validated";
+        const cardCls = item.is_top5 ? "top5-card" : (item.status === "excluded" ? "excluded-card" : (item.status === "deferred" ? "deferred-card" : ""));
+        const statusBadge = item.status === "validated"
+          ? '<span class="badge badge-valid">✅ Valid Idea</span>'
+          : (item.status === "deferred" ? '<span class="badge badge-deferred">⚠️ مؤجّل</span>' : '<span class="badge badge-excluded">🚫 مستبعد بعد الفحص</span>');
+
+        const swotDetails = isValid ? `
+          <details>
+            <summary>عرض التحليل الكامل: SWOT + نموذج العمل + النموذج الربحي + اختبار 7 أيام</summary>
+            <div class="details-body">
+              <div class="swot-grid">
+                <div class="swot-box swot-s"><h4>💪 نقاط القوة (Strengths)</h4><div>${esc(item.swot_strengths)}</div></div>
+                <div class="swot-box swot-w"><h4>⚠️ نقاط الضعف (Weaknesses)</h4><div>${esc(item.swot_weaknesses)}</div></div>
+                <div class="swot-box swot-o"><h4>🚀 الفرص (Opportunities)</h4><div>${esc(item.swot_opportunities)}</div></div>
+                <div class="swot-box swot-t"><h4>🛡️ التهديدات (Threats)</h4><div>${esc(item.swot_threats)}</div></div>
+              </div>
+              <div class="info-grid">
+                <div class="info-block"><strong>🏢 نموذج العمل التجاري (Business Model)</strong>${esc(item.business_model)}</div>
+                <div class="info-block"><strong>💰 النموذج الربحي (Revenue Model — تقديري)</strong>${esc(item.revenue_model)}</div>
+                <div class="info-block"><strong>🔎 أدلة الطلب المرصودة</strong>${esc(item.demand_evidence)}</div>
+                <div class="info-block"><strong>🧪 اختبار التحقق خلال 7 أيام</strong>${esc(item.validation_7d)}</div>
+              </div>
+            </div>
+          </details>
+        ` : "";
+
+        return `
+          <article class="idea-card ${cardCls}">
+            <div class="card-header">
+              <div>
+                <div class="badges">
+                  ${item.is_top5 ? `<span class="badge badge-top5">⭐ مرشّحة #${item.rank_order}</span>` : (isValid ? `<span class="badge badge-cat">المركز #${item.rank_order}</span>` : '')}
+                  ${statusBadge}
+                  <span class="badge badge-seg">${esc(item.segment_type)}</span>
+                  <span class="badge badge-cat">${esc(item.category)}</span>
+                  <span class="badge badge-date">أُضيفت: ${esc(item.created_at)} | تحديث: ${esc(item.updated_at)}</span>
+                </div>
+                <h3 class="idea-title">${esc(item.title_ar)}</h3>
+                <span class="idea-en">${esc(item.title_en)}</span>
+              </div>
+              <div class="metrics-panel">
+                <div class="metric-box">
+                  <div class="m-label">التقييم الموضوعي</div>
+                  <div class="m-val">${item.total_score} / 20</div>
+                </div>
+                <div class="metric-box ${probClass(item.success_probability_pct)}">
+                  <div class="m-label">نسبة النجاح التقديرية</div>
+                  <div class="m-val">${item.success_probability_pct}%</div>
+                  <div class="progress-track">
+                    <div class="progress-fill" style="width:${item.success_probability_pct}%; background:${probColor(item.success_probability_pct)};"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="criteria-row">
+              <div class="crit-item">
+                <div class="crit-head"><span>النجاح الفردي</span><span>${item.score_execution} / 5</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:${(item.score_execution / 5) * 100}%; background:#0f4c81;"></div></div>
+              </div>
+              <div class="crit-item">
+                <div class="crit-head"><span>النمو والتوسع</span><span>${item.score_growth} / 5</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:${(item.score_growth / 5) * 100}%; background:#0e7490;"></div></div>
+              </div>
+              <div class="crit-item">
+                <div class="crit-head"><span>شدة الاحتياج</span><span>${item.score_need} / 5</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:${(item.score_need / 5) * 100}%; background:#059669;"></div></div>
+              </div>
+              <div class="crit-item">
+                <div class="crit-head"><span>وضوح الكسب</span><span>${item.score_revenue} / 5</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:${(item.score_revenue / 5) * 100}%; background:#6d28d9;"></div></div>
+              </div>
+            </div>
+
+            <div class="info-grid">
+              <div class="info-block"><strong>📌 ملخص الفكرة</strong>${esc(item.summary)}</div>
+              <div class="info-block"><strong>🎯 سبب الترشيح / القرار</strong>${esc(item.selection_reason)}</div>
+              <div class="info-block comp-block"><strong>⚔️ المنافسون الفعليون بالخليج</strong>${esc(item.competitors)}</div>
+              <div class="info-block"><strong>🧩 الفجوة التنافسية وملاءمة الدخل الجانبي</strong>${esc(item.market_gap)}<br/><span style="color:#0f4c81; font-weight:700;">الدخل الجانبي:</span> ${esc(item.side_income_fit)}</div>
+            </div>
+
+            ${item.exclusion_reason ? `<div class="info-block excl-block" style="margin-top:12px;"><strong>🚫 سبب الاستبعاد / التأجيل لمنع التكرار</strong>${esc(item.exclusion_reason)}</div>` : ''}
+            <div class="info-block" style="margin-top:12px; background:#f0fdf4; border-color:#bbf7d0;">
+              <strong style="color:#166534;">🔑 شرط تحقيق نسبة النجاح (${item.success_probability_pct}%)</strong>
+              ${esc(item.success_condition)}
+            </div>
+
+            ${swotDetails}
+          </article>
+        `;
+      }).join("");
+    }
+
+    document.querySelectorAll("#status-tabs .tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#status-tabs .tab-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentStatus = btn.dataset.filter;
+        renderCards();
+      });
+    });
+
+    document.getElementById("segment-filter").addEventListener("change", e => {
+      currentSegment = e.target.value;
+      renderCards();
+    });
+
+    document.getElementById("sort-by").addEventListener("change", e => {
+      currentSort = e.target.value;
+      renderCards();
+    });
+
+    document.getElementById("search-input").addEventListener("input", e => {
+      searchQuery = e.target.value;
+      renderCards();
+    });
+
+    renderSummaryTable();
+    renderCards();
+  </script>
+</body>
+</html>
