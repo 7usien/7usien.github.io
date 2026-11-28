@@ -556,13 +556,121 @@
 
     .criteria-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
       gap: 12px;
       margin: 14px 0 16px;
       padding: 13px 15px;
       background: rgba(26, 37, 61, 0.55);
       border-radius: 12px;
       border: 1px solid var(--border);
+    }
+
+    .funnel-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(20, 30, 51, 0.96));
+      border: 1px solid rgba(56, 189, 248, 0.24);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .funnel-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 12px;
+    }
+
+    .funnel-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+    }
+
+    .funnel-step {
+      background: rgba(8, 12, 20, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 11px 13px;
+    }
+
+    .funnel-step strong {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--subtle);
+    }
+
+    .funnel-step .f-num {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2px 0;
+    }
+
+    .funnel-step span {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .sources-list {
+      margin-top: 12px;
+      background: rgba(8, 12, 20, 0.58);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .sources-list-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .source-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 8px;
+    }
+
+    .source-item {
+      display: block;
+      text-decoration: none;
+      background: rgba(20, 30, 51, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 11px;
+      color: var(--muted);
+      font-size: 0.81rem;
+      transition: border-color 0.16s ease, background 0.16s ease;
+    }
+
+    .source-item:hover {
+      border-color: var(--primary);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--text);
+    }
+
+    .source-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .source-plat {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+
+    .source-label {
+      font-weight: 600;
+      color: #e2e8f0;
     }
 
     .crit-item {
@@ -790,7 +898,7 @@
       </div>
       <div class="kpi-card">
         <div class="kpi-label">الأفكار المُحقَّقة (Valid Ideas)</div>
-        <div class="kpi-value" style="color: var(--accent);">16</div>
+        <div class="kpi-value" style="color: var(--accent);">15</div>
         <div class="kpi-sub">اجتازت فحص المنافسة والاحتياج</div>
       </div>
       <div class="kpi-card">
@@ -800,7 +908,7 @@
       </div>
       <div class="kpi-card">
         <div class="kpi-label">المستبعدة / المؤجّلة بعد الفحص</div>
-        <div class="kpi-value" style="color: var(--danger);">7</div>
+        <div class="kpi-value" style="color: var(--danger);">8</div>
         <div class="kpi-sub">محفوظة مع أسباب الاستبعاد لتفادي هدر الوقت</div>
       </div>
     </div>
@@ -808,7 +916,12 @@
 
   <main class="container">
     <div class="notice-box">
-      <strong>ملاحظة منهجية مهمة:</strong> أسماء المنافسين وأسعارهم والشكاوى المرصودة هي <strong>وقائع ميدانية مُحقّقة</strong>، بينما <strong>نسب النجاح التقديرية (%) وأسعار الباقات المقترحة</strong> هي <strong>تقديرات تحليلية مشروطة</strong> بتنفيذ اختبار التحقق خلال 7 أيام والالتزام بشرط التميز الموضح داخل كل بطاقة.
+      <strong>ملاحظة منهجية مهمة:</strong> كل فكرة تمر الآن عبر <strong>آلية التصفيات (4 أدوار إقصائية)</strong> وتعرض <strong>مصادرها المباشرة القابلة للفتح</strong>. أسماء المنافسين وروابط المصادر وقائع مرصودة، بينما <strong>نسب النجاح (%) والأسعار المقترحة</strong> تقديرات تحليلية مشروطة باختبار الـ 7 أيام.
+    </div>
+
+    <div class="funnel-box">
+      <h3 class="funnel-title">🏆 مسار آلية التصفيات للوصول إلى أفضل 5 أفكار غير تقليدية</h3>
+      <div class="funnel-steps" id="tournament-funnel"></div>
     </div>
 
     <div class="section-head" id="comparison-section">
@@ -822,7 +935,7 @@
             <th>#</th>
             <th>الفكرة</th>
             <th>النوع</th>
-            <th>التقييم (/20)</th>
+            <th>التقييم التنافسي (/25)</th>
             <th>نسبة النجاح التقديرية</th>
             <th>أبرز المنافسين المرصودين</th>
             <th>ملاءمتها كدخل جانبي</th>
@@ -842,8 +955,8 @@
           <button class="tab-btn active" data-filter="all">الكل (23)</button>
           <button class="tab-btn" data-filter="latest">🆕 أحدث جولة (2026-11-28: 12)</button>
           <button class="tab-btn" data-filter="top5">⭐ أفضل 5 مرشّحة (5)</button>
-          <button class="tab-btn" data-filter="validated">✅ المُحقَّقة (16)</button>
-          <button class="tab-btn" data-filter="excluded">🚫 المستبعدة والمؤجّلة (7)</button>
+          <button class="tab-btn" data-filter="validated">✅ المُحقَّقة (15)</button>
+          <button class="tab-btn" data-filter="excluded">🚫 المستبعدة والمؤجّلة (8)</button>
         </div>
         <button class="action-btn" id="toggle-all-btn" type="button">توسيع كل تحليلات SWOT</button>
       </div>
@@ -943,6 +1056,30 @@
       setTimeout(() => el.classList.remove("highlight-pulse"), 1800);
     }
 
+    function renderFunnel() {
+      const total = IDEAS.length;
+      const g1Out = IDEAS.filter(i => (i.tournament_stage || "").includes("بالدور 1")).length;
+      const g2Out = IDEAS.filter(i => (i.tournament_stage || "").includes("بالدور 2")).length;
+      const g3Out = IDEAS.filter(i => (i.tournament_stage || "").includes("بربع النهائي")).length;
+      const semi = IDEAS.filter(i => (i.tournament_stage || "").includes("نصف النهائي")).length;
+      const top5 = IDEAS.filter(i => i.is_top5).length;
+      document.getElementById("tournament-funnel").innerHTML = `
+        <div class="funnel-step"><strong>البداية (الإجمالي)</strong><div class="f-num">${total}</div><span>أفكار مفحوصة ميدانياً</span></div>
+        <div class="funnel-step"><strong>الدور 1 (الأصالة والفائدة)</strong><div class="f-num" style="color:var(--danger);">-${g1Out}</div><span>أُقصيت لكونها كلاسيكية أو مشبعة</span></div>
+        <div class="funnel-step"><strong>الدور 2 + ربع النهائي</strong><div class="f-num" style="color:var(--warn);">-${g2Out + g3Out}</div><span>أُقصيت لثقل التنفيذ أو ضعف المصادر</span></div>
+        <div class="funnel-step"><strong>نصف النهائي</strong><div class="f-num" style="color:var(--primary);">${semi}</div><span>أفكار قوية مؤجّلة احتياطياً</span></div>
+        <div class="funnel-step" style="border-color:rgba(52,211,153,0.35);"><strong>🏆 النهائي (Top 5)</strong><div class="f-num" style="color:var(--accent);">${top5}</div><span>أفضل 5 غير تقليدية وعالية الطلب</span></div>
+      `;
+    }
+
+    function parseSources(item) {
+      if (Array.isArray(item.sources_json)) return item.sources_json;
+      if (typeof item.sources_json === "string" && item.sources_json.trim()) {
+        try { return JSON.parse(item.sources_json); } catch { return []; }
+      }
+      return [];
+    }
+
     function renderSummaryTable() {
       const tbody = document.getElementById("summary-table-body");
       const valid = IDEAS.filter(i => i.status === "validated").sort((a, b) => (a.rank_order || 999) - (b.rank_order || 999));
@@ -951,11 +1088,11 @@
           <td><strong>#${idx + 1}</strong></td>
           <td>
             <strong style="color:#f8fafc;">${esc(item.title_ar)}</strong>
-            ${item.is_top5 ? '<span class="badge badge-top5" style="margin-right:6px;">Top 5</span>' : ''}
+            ${item.is_top5 ? '<span class="badge badge-top5" style="margin-right:6px;">🏆 Top 5</span>' : ''}
             ${item.created_at === window.LATEST_CREATED_AT ? '<span class="badge badge-new" style="margin-right:4px;">جديد</span>' : ''}
           </td>
           <td><span class="badge badge-seg">${esc(item.segment_type)}</span></td>
-          <td><strong style="color:var(--primary);">${item.total_score} / 20</strong></td>
+          <td><strong style="color:var(--primary);">${item.tournament_score || item.total_score} / 25</strong></td>
           <td>
             <strong style="color:${probColor(item.success_probability_pct)}">${item.success_probability_pct}%</strong>
             <div class="progress-track" style="width:96px;">
@@ -1030,13 +1167,31 @@
           </details>
         ` : "";
 
+        const sources = parseSources(item);
+        const sourcesHtml = sources.length ? `
+          <div class="sources-list">
+            <div class="sources-list-title">🔗 المصادر والأدلة الموثّقة (${sources.length}) — اضغط لفتح المصدر</div>
+            <div class="source-items">
+              ${sources.map(s => `
+                <a class="source-item" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">
+                  <div class="source-head">
+                    <span class="source-label">${esc(s.label)} ↗</span>
+                    <span class="source-plat">${esc(s.platform)}</span>
+                  </div>
+                  <div>${esc(s.evidence)}</div>
+                </a>
+              `).join("")}
+            </div>
+          </div>
+        ` : "";
+
         return `
           <article class="idea-card ${cardCls}" id="card-${esc(item.slug)}">
             <div class="card-header">
               <div>
                 <div class="badges">
+                  ${item.tournament_stage ? `<span class="badge ${item.is_top5 ? 'badge-top5' : (isValid ? 'badge-valid' : 'badge-excluded')}">${esc(item.tournament_stage)}</span>` : ''}
                   ${item.created_at === window.LATEST_CREATED_AT ? '<span class="badge badge-new">🆕 جولة جديدة</span>' : ''}
-                  ${item.is_top5 ? `<span class="badge badge-top5">⭐ مرشّحة #${item.rank_order}</span>` : (isValid ? `<span class="badge badge-cat">المركز #${item.rank_order}</span>` : '')}
                   ${statusBadge}
                   <span class="badge badge-seg">${esc(item.segment_type)}</span>
                   <span class="badge badge-cat">${esc(item.category)}</span>
@@ -1047,8 +1202,8 @@
               </div>
               <div class="metrics-panel">
                 <div class="metric-box">
-                  <div class="m-label">التقييم الموضوعي</div>
-                  <div class="m-val">${item.total_score} / 20</div>
+                  <div class="m-label">تقييم التصفيات</div>
+                  <div class="m-val">${item.tournament_score || item.total_score} / 25</div>
                 </div>
                 <div class="metric-box ${probClass(item.success_probability_pct)}">
                   <div class="m-label">نسبة النجاح التقديرية</div>
@@ -1077,15 +1232,20 @@
                 <div class="crit-head"><span>وضوح الكسب</span><span>${item.score_revenue} / 5</span></div>
                 <div class="progress-track"><div class="progress-fill" style="width:${(item.score_revenue / 5) * 100}%; background:#a78bfa;"></div></div>
               </div>
+              <div class="crit-item">
+                <div class="crit-head"><span>الأصالة (غير تقليدية)</span><span>${item.score_non_classic || 3} / 5</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width:${((item.score_non_classic || 3) / 5) * 100}%; background:#f472b6;"></div></div>
+              </div>
             </div>
 
             <div class="info-grid">
               <div class="info-block"><strong>📌 ملخص الفكرة</strong>${esc(item.summary)}</div>
-              <div class="info-block"><strong>🎯 سبب الترشيح / القرار</strong>${esc(item.selection_reason)}</div>
+              <div class="info-block"><strong>🎯 سبب الترشيح / القرار + الأصالة</strong>${esc(item.selection_reason)}${item.novelty_utility_note ? `<br/><span style="color:#f472b6; font-weight:600;">ميزة الأصالة والفائدة:</span> ${esc(item.novelty_utility_note)}` : ''}</div>
               <div class="info-block comp-block"><strong>⚔️ المنافسون الفعليون بالخليج</strong>${esc(item.competitors)}</div>
               <div class="info-block"><strong>🧩 الفجوة التنافسية وملاءمة الدخل الجانبي</strong>${esc(item.market_gap)}<br/><span style="color:var(--primary); font-weight:600;">الدخل الجانبي:</span> ${esc(item.side_income_fit)}</div>
             </div>
 
+            ${sourcesHtml}
             ${item.exclusion_reason ? `<div class="info-block excl-block" style="margin-top:12px;"><strong>🚫 سبب الاستبعاد / التأجيل لمنع التكرار</strong>${esc(item.exclusion_reason)}</div>` : ''}
             ${item.success_condition ? `<div class="info-block cond-block"><strong>🔑 شرط تحقيق نسبة النجاح (${item.success_probability_pct}%)</strong>${esc(item.success_condition)}</div>` : ''}
 
@@ -1138,6 +1298,7 @@
     });
 
     populateCategories();
+    renderFunnel();
     renderSummaryTable();
     renderCards();
   </script>
