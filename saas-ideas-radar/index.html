@@ -513,7 +513,7 @@
           <h1>رادار أفكار SaaS والذكاء الاصطناعي — الخليج العربي</h1>
           <p>لوحة مرجعية حيّة ومُحدّثة تراكمياً للأفكار المُحقَّقة ميدانياً (Valid Ideas) والمستبعدة لمنع التكرار، مع المنافسين الفعليين، معايير التقييم، نسب النجاح التقديرية، تحليل SWOT، ونموذج العمل والربح.</p>
         </div>
-        <div class="update-pill">آخر تحديث: 2026-11-26</div>
+        <div class="update-pill">آخر تحديث: 2026-11-28</div>
       </div>
     </div>
   </header>
@@ -522,12 +522,12 @@
     <div class="kpi-grid">
       <div class="kpi-card">
         <div class="kpi-label">إجمالي الأفكار المفحوصة</div>
-        <div class="kpi-value">11</div>
+        <div class="kpi-value">23</div>
         <div class="kpi-sub">محفوظة بقاعدة البيانات لمنع التكرار</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">الأفكار المُحقَّقة (Valid Ideas)</div>
-        <div class="kpi-value" style="color: var(--accent);">7</div>
+        <div class="kpi-value" style="color: var(--accent);">16</div>
         <div class="kpi-sub">اجتازت فحص المنافسة والاحتياج</div>
       </div>
       <div class="kpi-card">
@@ -537,7 +537,7 @@
       </div>
       <div class="kpi-card">
         <div class="kpi-label">المستبعدة / المؤجّلة بعد الفحص</div>
-        <div class="kpi-value" style="color: var(--danger);">4</div>
+        <div class="kpi-value" style="color: var(--danger);">7</div>
         <div class="kpi-sub">محفوظة مع أسباب الاستبعاد لتفادي إضاعة الوقت</div>
       </div>
     </div>
@@ -569,10 +569,11 @@
     <h2 class="section-title">🗂️ استعراض وتصفية كل الأفكار (القديم + الجديد)</h2>
     <div class="controls">
       <div class="tabs" id="status-tabs">
-        <button class="tab-btn active" data-filter="all">الكل (11)</button>
+        <button class="tab-btn active" data-filter="all">الكل (23)</button>
+        <button class="tab-btn" data-filter="latest">🆕 أحدث جولة (2026-11-28: 12)</button>
         <button class="tab-btn" data-filter="top5">⭐ أفضل 5 مرشّحة (5)</button>
-        <button class="tab-btn" data-filter="validated">✅ المُحقَّقة (7)</button>
-        <button class="tab-btn" data-filter="excluded">🚫 المستبعدة والمؤجّلة (4)</button>
+        <button class="tab-btn" data-filter="validated">✅ المُحقَّقة (16)</button>
+        <button class="tab-btn" data-filter="excluded">🚫 المستبعدة والمؤجّلة (7)</button>
       </div>
       <div class="filters-right">
         <select id="segment-filter" class="input-control">
@@ -598,7 +599,7 @@
     تقرير رادار فرص SaaS والذكاء الاصطناعي للخليج العربي — يُحدَّث تلقائياً من قاعدة البيانات التراكمية بعد كل جلسة بحث دون حذف الأرشيف السابق.
   </footer>
 
-  <script src="./ideas-data.js?v=2026-11-26"></script>
+  <script src="./ideas-data.js?v=2026-11-28"></script>
   <script>
     const IDEAS = window.IDEAS || [];
 
@@ -657,6 +658,7 @@
       const q = searchQuery.trim().toLowerCase();
 
       let list = IDEAS.filter(item => {
+        if (currentStatus === "latest" && item.created_at !== window.LATEST_CREATED_AT) return false;
         if (currentStatus === "top5" && !item.is_top5) return false;
         if (currentStatus === "validated" && item.status !== "validated") return false;
         if (currentStatus === "excluded" && item.status !== "excluded" && item.status !== "deferred") return false;
@@ -715,6 +717,7 @@
             <div class="card-header">
               <div>
                 <div class="badges">
+                  ${item.created_at === window.LATEST_CREATED_AT ? '<span class="badge" style="background:#dbeafe;color:#1e40af;">🆕 جولة جديدة</span>' : ''}
                   ${item.is_top5 ? `<span class="badge badge-top5">⭐ مرشّحة #${item.rank_order}</span>` : (isValid ? `<span class="badge badge-cat">المركز #${item.rank_order}</span>` : '')}
                   ${statusBadge}
                   <span class="badge badge-seg">${esc(item.segment_type)}</span>
@@ -766,10 +769,7 @@
             </div>
 
             ${item.exclusion_reason ? `<div class="info-block excl-block" style="margin-top:12px;"><strong>🚫 سبب الاستبعاد / التأجيل لمنع التكرار</strong>${esc(item.exclusion_reason)}</div>` : ''}
-            <div class="info-block" style="margin-top:12px; background:#f0fdf4; border-color:#bbf7d0;">
-              <strong style="color:#166534;">🔑 شرط تحقيق نسبة النجاح (${item.success_probability_pct}%)</strong>
-              ${esc(item.success_condition)}
-            </div>
+            ${item.success_condition ? `<div class="info-block" style="margin-top:12px; background:#f0fdf4; border-color:#bbf7d0;"><strong style="color:#166534;">🔑 شرط تحقيق نسبة النجاح (${item.success_probability_pct}%)</strong>${esc(item.success_condition)}</div>` : ''}
 
             ${swotDetails}
           </article>
